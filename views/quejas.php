@@ -61,7 +61,7 @@
 								<input class="queja-entrada" type="text" class="" type="text">
 							</div>
 						</div>
-						<div class="queja-fila col-xs-12 col-sm-6">
+						<!-- <div class="queja-fila col-xs-12 col-sm-6">
 							<div class="col-xs-12">
 								Correo<span class="queja-asterisco"> *</span>
 							</div>
@@ -71,7 +71,7 @@
 							<div class="col-xs-12">
 								<input class="queja-entrada" type="email" class="" type="text">
 							</div>
-						</div>
+						</div> -->
 						<div class="quejas-btn-pub col-xs-12">
 							<button type="submit" name="queja-btnPublicar" class="btn-publicar">
 									Publicar comentario

@@ -34,100 +34,39 @@
 					  <label for="changemode-driving">Conduciendo</label>
 					</div>
 
+					<!-- MAPA -->
 					<div id="map"></div>
 
-					<!-- <div class="rutas-mapa-contenedor col-xs-12 col-sm-offset-1 col-sm-10">
-						<div class="rutas-mapa" id="map"></div>
-					</div>	 -->
-
-					<!-- <form action="" method="post">
-						<div class="rutas-izq col-xs-12 col-sm-6">
-							<div class="col-xs-12">
-								Punto de inicio
-							</div>
-							<div class="col-xs-12">
-								<input class="rut-input rut-input1" type="text">
-							</div>
-						</div>
-						<div class="rutas-der col-xs-12 col-sm-6">
-							<div class="col-xs-12">
-								Punto de Destino
-							</div>
-							<div class="col-xs-12">
-								<input class="rut-input rut-input2" type="text">
-							</div>
-						</div>
-						<div class="queja-btn col-sx-12">
-							<button type="submit" name="queja-btnBuscar" class="rutas-btnBuscar">
-								Buscar
-							</button>
-						</div>
-					</form> -->
 				</div>			
 			</div>
 		</div>
-
-	<!-- MAPA -->
-
-		<!-- <div class="rutas-mapa-contenedor col-xs-12 col-sm-offset-1 col-sm-10">
-			<div class="rutas-mapa" id="map"></div>
-		</div> -->
 
 		<div class="rutas-sect3 col-xs-12">
 			<div class="container">
-				<div class="col-xs-12 col-sm-offset-1 col-sm-10">
-					<div class="rutas-sect3-cuadro col-xs-12">
-						<div class="col-xs-12 col-sm-6 col-md-5">
-								Ruta más corta:
-						</div>
-						<div class="rutas-sect3-color col-xs-12 col-sm-6 col-md-offset-2 col-md-5">
-							<div class="col-xs-12 rutas-sect3-verde">
-								
-							</div>	
-						</div>
-						<div class="col-xs-12 col-sm-6 col-md-5">
-								Otras rutas
-						</div>
-						<div class="rutas-sect3-color col-xs-12 col-sm-6 col-md-offset-2 col-md-5">
-							<div class="col-xs-12 rutas-sect3-azul">
-								
-							</div>	
-						</div>
-						<div class="col-xs-12">
-							Que carros puedo tomar?
-						</div>
-						<div class="col-xs-12 col-sm-5">
-								carro1
-						</div>
-						<div class="col-xs-12 col-sm-2">
-								--->				
-						</div>
-						<div class="col-xs-12 col-sm-5">
-								pasaje: S/. 2.00
-						</div>
-						<div class="col-xs-12 col-sm-5">
-								carro2
-						</div>
-						<div class="col-xs-12 col-sm-2">
-								--->				
-						</div>
-						<div class="col-xs-12 col-sm-5">
-								pasaje: S/. 1.80
-						</div>
-						<div class="col-xs-12 col-sm-5">
-								carro3
-						</div>
-						<div class="col-xs-12 col-sm-2">
-								--->				
-						</div>
-						<div class="col-xs-12 col-sm-5">
-								pasaje: S/. 2.00
-						</div>
-						
+				<div class="rutas-sect3-paraderos col-xs-12 col-sm-offset-1 col-sm-10">
+					<div class="col-xs-12">
+						Ver paraderos de las empresas de transporte
 					</div>
-				</div>			
+					<div class="rutas-sect3-empresas col-xs-12">
+						<div class="col-xs-12 col-sm-6">
+							<button>Consorcio via sac</button>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<button>Consorcio via sac</button>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<button>Consorcio via sac</button>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<button>Consorcio via sac</button>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<button>Consorcio via sac</button>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
+		</div>	
 	</div>
 </div>
 
