@@ -1,67 +1,104 @@
 <?php 
-
-require_once 'sis/common/config.php';
-require_once 'sis/models/general.class.php';
-include 'models/web.class.php';
-include 'functions/functions.php';
-$obj = new Catalogo_web();
-
-	$arg = array(
-		$empresa_id
-	);
-
-
-	//Listado de categorias/subcategorias
-	// $listaCategoria = $obj->listaCategoria($arg);
-
-	//Listado de productos
-	$listaempresas = $obj->listaEmpresas($arg);
-
-	// echo '<br>empresa_id---->'.$empresa_id; 
-
-	$visibleP='visible';
-	$alertP = '';
-	if($listaempresas=='0'){
-		# Sección de productos
-		$alertP = '
-			<br><br>
-			<div class="alert-info text-center section-general"><b> No se encontraron productos.</b></div>
-		';
-		$visibleP = 'hidden';
-	}
-
-	// $totalempresas = $obj->totalempresas();
-	// echo "total de empresas: ".$totalempresas;
-
-	// $total = $totalempresas;
-	// $limit = 3;
-	// $pag = 1;
-	// $btn_op = 1;
-
-	// $paginador = paginator($total,$limit,$pag,$btn_op);
-
-
-/*** paginador ***/
-
-	$totalempresas = $obj->totalEmpresas();
-
-	$pagina_actual = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
-
-	$postPorPagina = 4;
-
-	$inicio = ($pagina_actual > 1)? (($pagina_actual - 1)*$postPorPagina) : 0;
-
-	$numeroPaginas = ceil($totalempresas / $postPorPagina);
-
-	$empresasPorPagina = $obj->empresasXpagina($inicio,$postPorPagina);
-
-	// $vistaPaginador = $obj->paginadorempresa();
-
-
-/*** fin de paginador ***/
-
-
-
 $view = $path['views'].basename($_SERVER['PHP_SELF']); 
 require $path['tpl'].'template.php'; 
 ?>
+
+
+<script>
+
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          mapTypeControl: false,
+          center: {lat: -12.055710, lng: -77.084442},
+          zoom: 15
+        });
+
+        new AutocompleteDirectionsHandler(map);
+      }
+
+       /**
+        * @constructor
+       */
+      function AutocompleteDirectionsHandler(map) {
+        this.map = map;
+        this.originPlaceId = null;
+        this.destinationPlaceId = null;
+        this.travelMode = 'WALKING';
+        var originInput = document.getElementById('origin-input');
+        var destinationInput = document.getElementById('destination-input');
+        var modeSelector = document.getElementById('mode-selector');
+        this.directionsService = new google.maps.DirectionsService;
+        this.directionsDisplay = new google.maps.DirectionsRenderer;
+        this.directionsDisplay.setMap(map);
+
+        var originAutocomplete = new google.maps.places.Autocomplete(
+            originInput, {placeIdOnly: true});
+        var destinationAutocomplete = new google.maps.places.Autocomplete(
+            destinationInput, {placeIdOnly: true});
+
+        this.setupClickListener('changemode-walking', 'WALKING');
+        this.setupClickListener('changemode-transit', 'TRANSIT');
+        this.setupClickListener('changemode-driving', 'DRIVING');
+
+        this.setupPlaceChangedListener(originAutocomplete, 'ORIG');
+        this.setupPlaceChangedListener(destinationAutocomplete, 'DEST');
+
+        this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(originInput);
+        this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(destinationInput);
+        this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(modeSelector);
+      }
+
+      // Sets a listener on a radio button to change the filter type on Places
+      // Autocomplete.
+      AutocompleteDirectionsHandler.prototype.setupClickListener = function(id, mode) {
+        var radioButton = document.getElementById(id);
+        var me = this;
+        radioButton.addEventListener('click', function() {
+          me.travelMode = mode;
+          me.route();
+        });
+      };
+
+      AutocompleteDirectionsHandler.prototype.setupPlaceChangedListener = function(autocomplete, mode) {
+        var me = this;
+        autocomplete.bindTo('bounds', this.map);
+        autocomplete.addListener('place_changed', function() {
+          var place = autocomplete.getPlace();
+          if (!place.place_id) {
+            window.alert("Please select an option from the dropdown list.");
+            return;
+          }
+          if (mode === 'ORIG') {
+            me.originPlaceId = place.place_id;
+          } else {
+            me.destinationPlaceId = place.place_id;
+          }
+          me.route();
+        });
+
+      };
+
+      AutocompleteDirectionsHandler.prototype.route = function() {
+        if (!this.originPlaceId || !this.destinationPlaceId) {
+          return;
+        }
+        var me = this;
+
+        this.directionsService.route({
+          origin: {'placeId': this.originPlaceId},
+          destination: {'placeId': this.destinationPlaceId},
+          travelMode: this.travelMode
+        }, function(response, status) {
+          if (status === 'OK') {
+            me.directionsDisplay.setDirections(response);
+          } else {
+            window.alert('Directions request failed due to ' + status);
+          }
+        });
+      };
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWTqbyGQEG91zL0IeVEuPi3ZTGvji0TE8&libraries=places&callback=initMap"
+        async defer></script>
+
+

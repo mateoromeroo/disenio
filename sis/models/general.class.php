@@ -1,5 +1,5 @@
 <?php 
-error_reporting(0); // para que oculte los warning y los notice
+// error_reporting(0); // para que oculte los warning y los notice
 
 
 /*

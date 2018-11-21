@@ -6,6 +6,8 @@ include 'models/web.class.php';
 include 'functions/functions.php';
 $obj = new Catalogo_web();
 
+
+
 	$arg = array(
 		$noticia_id
 	);

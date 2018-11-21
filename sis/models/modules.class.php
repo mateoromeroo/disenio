@@ -311,45 +311,6 @@
             return $lista;
         }
 
-        #6
-        public function buscar($value,$btn_op)
-        {
-            # Inicia variables
-            $lista = '';
-
-            # Datos Paginador
-            $offset = $page*$limit;
-
-            #Table Config
-            $config=array(
-                    "title"=>'Lista de Categorías <a class="btn-danger" href="categoria.php" style="float:right;"><span class="glyphicon glyphicon-remove"></span> Cancelar Búsqueda</a>'
-                    ,"icon"=>"th-list"
-                    ,"visible"=>"block"
-                    ,"btn-op"=>$btn_op
-            );
-
-            #Query
-            $query = array(
-                "consult"=>array(
-                    'tables'=>array(
-                        array('noticia','c')
-                    ),
-                    'conditional'=>array(
-                        array('','c.noticia_activo','=','1')
-                        ,array('and','c.noticia_nombre','like','CONCAT("%","'.$value.'","%")')
-                    )
-                )         
-            );
-
-            #Table
-            $table = $this->table_config('activo');
-
-
-            // Empleamos el metodo dinamicTable
-            $lista = $this->dinamicTable($config,$table,$query); 
-            return $lista;        
-        }
-
         #7
         public function cambiarEstado($value,$id)
         {
@@ -522,6 +483,46 @@
 
             return $update;
         }
+
+         #6
+        public function buscar($value,$btn_op)
+        {
+            # Inicia variables
+            $lista = '';
+
+            # Datos Paginador
+            $offset = $page*$limit;
+
+            #Table Config
+            $config=array(
+                    "title"=>'Lista de Categorías <a class="btn-danger" href="categoria.php" style="float:right;"><span class="glyphicon glyphicon-remove"></span> Cancelar Búsqueda</a>'
+                    ,"icon"=>"th-list"
+                    ,"visible"=>"block"
+                    ,"btn-op"=>$btn_op
+            );
+
+            #Query
+            $query = array(
+                "consult"=>array(
+                    'tables'=>array(
+                        array('noticia','c')
+                    ),
+                    'conditional'=>array(
+                        array('','c.noticia_activo','=','1')
+                        ,array('and','c.noticia_nombre','like','CONCAT("%","'.$value.'","%")')
+                    )
+                )         
+            );
+
+            #Table
+            $table = $this->table_config('activo');
+
+
+            // Empleamos el metodo dinamicTable
+            $lista = $this->dinamicTable($config,$table,$query); 
+            return $lista;        
+        }
+
 
 
         public function listaTipo($tipo_id)
@@ -860,45 +861,6 @@
             return $lista;
         }
 
-        #6
-        public function buscar($value,$btn_op)
-        {
-            # Inicia variables
-            $lista = '';
-
-            # Datos Paginador
-            $offset = $page*$limit;
-
-            #Table Config
-            $config=array(
-                    "title"=>'Lista de Categorías <a class="btn-danger" href="categoria.php" style="float:right;"><span class="glyphicon glyphicon-remove"></span> Cancelar Búsqueda</a>'
-                    ,"icon"=>"th-list"
-                    ,"visible"=>"block"
-                    ,"btn-op"=>$btn_op
-            );
-
-            #Query
-            $query = array(
-                "consult"=>array(
-                    'tables'=>array(
-                        array('empresa','c')
-                    ),
-                    'conditional'=>array(
-                        array('','c.empresa_activo','=','1')
-                        ,array('and','c.empresa_nombre','like','CONCAT("%","'.$value.'","%")')
-                    )
-                )         
-            );
-
-            #Table
-            $table = $this->table_config('activo');
-
-
-            // Empleamos el metodo dinamicTable
-            $lista = $this->dinamicTable($config,$table,$query); 
-            return $lista;        
-        }
-
         #7
         public function cambiarEstado($value,$id)
         {
@@ -1070,6 +1032,45 @@
             $update=$this->editRegister($arg);
 
             return $update;
+        }
+
+         #6
+        public function buscar($value,$btn_op)
+        {
+            # Inicia variables
+            $lista = '';
+
+            # Datos Paginador
+            $offset = $page*$limit;
+
+            #Table Config
+            $config=array(
+                    "title"=>'Lista de Categorías <a class="btn-danger" href="categoria.php" style="float:right;"><span class="glyphicon glyphicon-remove"></span> Cancelar Búsqueda</a>'
+                    ,"icon"=>"th-list"
+                    ,"visible"=>"block"
+                    ,"btn-op"=>$btn_op
+            );
+
+            #Query
+            $query = array(
+                "consult"=>array(
+                    'tables'=>array(
+                        array('empresa','c')
+                    ),
+                    'conditional'=>array(
+                        array('','c.empresa_activo','=','1')
+                        ,array('and','c.empresa_nombre','like','CONCAT("%","'.$value.'","%")')
+                    )
+                )         
+            );
+
+            #Table
+            $table = $this->table_config('activo');
+
+
+            // Empleamos el metodo dinamicTable
+            $lista = $this->dinamicTable($config,$table,$query); 
+            return $lista;        
         }
 
 
