@@ -168,16 +168,16 @@ switch (basename($_SERVER['PHP_SELF'])) {
     </div>
     <div class="section-block sec-link-menu-rp">
       <a href="empresas.php">
-        <?= $lang['menu'][6]; ?>
-      </a>
-    </div>
-    <div class="section-block sec-link-menu-rp">
-      <a href="productos.php">
         <?= $lang['menu'][7]; ?>
       </a>
     </div>
     <div class="section-block sec-link-menu-rp">
-      <a href="noticias.php">
+      <a href="rutas.php">
+        <?= $lang['menu'][6]; ?>
+      </a>
+    </div>
+    <div class="section-block sec-link-menu-rp">
+      <a href="quejas.php">
         <?= $lang['menu'][8]; ?>
       </a>
     </div>
