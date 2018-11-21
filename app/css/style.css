@@ -416,7 +416,7 @@ body{
 	background-color: #ffffff;
 }
 .f-txt1 img{
-	height: 115px;
+	height: 85px;
 }
 /*Menu Responsive*/
 .section-general{
@@ -3768,12 +3768,12 @@ textarea.form-control{
 		padding-right: 45px;
 	}
 	.f-txt2{
-		margin-top: 41px;
-	    margin-bottom: 41px;
+		margin-top: 20px;
+	    margin-bottom: 15px;
 	}
 	.f-txt3{
-		margin-top: 41px;
-	    margin-bottom: 41px;
+		margin-top: 30px;
+	    margin-bottom: 15px;
 	}
 	.ini-sect5{
 	   /*height: 595px;*/

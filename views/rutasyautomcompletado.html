@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Place Autocomplete and Directions</title>
+    <title>Tu Ruta</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <style>
@@ -74,7 +74,7 @@
       <label for="changemode-transit">Transitando</label>
 
       <input type="radio" name="type" id="changemode-driving">
-      <label for="changemode-driving">navegando</label>
+      <label for="changemode-driving">Conduciendo</label>
     </div>
 
     <div id="map"></div>
@@ -87,8 +87,8 @@
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           mapTypeControl: false,
-          center: {lat: -33.8688, lng: 151.2195},
-          zoom: 13
+          center: {lat: -12.055836, lng: -77.084442},
+          zoom: 15
         });
 
         new AutocompleteDirectionsHandler(map);

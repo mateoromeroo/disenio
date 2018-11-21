@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Geolocation</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
+    <title>Tu Ruta</title>
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
@@ -16,18 +16,6 @@
         margin: 0;
         padding: 0;
       }
-
-      .img-trafico{
-        height: 40px;
-        width: 200px;
-        position: fixed;
-        top: 10px;
-        right: 60px;
-
-      }
-
-      /*input de búsqueda*/
-
       #description {
         font-family: Roboto;
         font-size: 15px;
@@ -82,9 +70,6 @@
         padding: 0 11px 0 13px;
         text-overflow: ellipsis;
         width: 400px;
-        position: fixed;
-        top: 15px;
-        left: 200px;
       }
 
       #pac-input:focus {
@@ -101,68 +86,26 @@
       #target {
         width: 345px;
       }
-      
     </style>
   </head>
   <body>
+    <input id="pac-input" class="controls" type="text" style="margin-top: 15px;" placeholder="Ingrese un lugar">
     <div id="map"></div>
-    <div class="col-xs-12">
-      <!-- <input id="pac-input" class="controls" type="text" placeholder="Search Box"> -->
-       <img class="img-trafico" src="../app/img/map/trafico.png" alt="">
-    </div>
-   
     <script>
-      // Note: This example requires that you consent to location sharing when
-      // prompted by your browser. If you see the error "The Geolocation service
-      // failed.", it means you probably did not give permission for the browser to
-      // locate you.
-      var map, infoWindow;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 15
+      // This example adds a search box to a map, using the Google Place Autocomplete
+      // feature. People can enter geographical searches. The search box will return a
+      // pick list containing a mix of places and predicted search terms.
+
+      // This example requires the Places library. Include the libraries=places
+      // parameter when you first load the API. For example:
+      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+      function initAutocomplete() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -33.8688, lng: 151.2195},
+          zoom: 13,
+          mapTypeId: 'roadmap'
         });
-
-        /** Capa Tráfico **/
-        var trafficLayer = new google.maps.TrafficLayer();
-        trafficLayer.setMap(map);
-        /** Fin Capa Tráfico **/
-        
-
-        // Geolocalización
-        infoWindow = new google.maps.InfoWindow;
-
-        // Try HTML5 geolocation.
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            };
-
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('Aquí estoy :D');
-            infoWindow.open(map);
-            map.setCenter(pos);
-          }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-          });
-        } else {
-          // Browser doesn't support Geolocation
-          handleLocationError(false, infoWindow, map.getCenter());
-        }
-
-        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ?
-                              'Error: The Geolocation service failed.' :
-                              'Error: Your browser doesn\'t support geolocation.');
-        infoWindow.open(map);
-      }
-
-
-
-        // Buscador con Autocompletado:
 
         // Create the search box and link it to the UI element.
         var input = document.getElementById('pac-input');
@@ -224,10 +167,8 @@
         });
       }
 
-      
     </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWTqbyGQEG91zL0IeVEuPi3ZTGvji0TE8&callback=initMap">
-    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWTqbyGQEG91zL0IeVEuPi3ZTGvji0TE8&libraries=places&callback=initAutocomplete"
+         async defer></script>
   </body>
 </html>

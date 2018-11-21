@@ -56,7 +56,7 @@ switch (basename($_SERVER['PHP_SELF'])) {
 			<div class="col-xs-12">
 				<div class="col-xs-12 col-md-3 h-logo">
 					<a href="index.php">
-						<img id="h-logo" style="height: 100px;" class="img-responsive h-img-logo" src="app/img/home/logo.png" alt="">
+						<img id="h-logo" style="height: 75px;" class="img-responsive h-img-logo" src="app/img/home/logo.png" alt="">
 					</a>
 				</div>
 

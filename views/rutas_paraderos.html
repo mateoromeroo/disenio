@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Tu Ruta</title>
 
   <link rel="stylesheet" href="../app/css/bootstrap.css"/>
   <link rel="stylesheet" href="../app/css/map.css"/>
@@ -30,7 +30,7 @@
         <div class="row googleMap">
             <div class="col-sm-3 col-md-2 sidebar">
                 <ul class="nav nav-sidebar" id="mainLine">
-                    <!-- <li><a href="#">主幹線</a></li> -->
+                    <!-- <li><a href="#"></a></li> -->
                 </ul>
             </div>
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 googleMap">
@@ -73,7 +73,7 @@
             
             $.when(getBusStop(), getBusRoute()).done(function (busStopData, busRouteData) {
 
-                //路線名稱
+               
                 $.each(busStopData[0], function (index, value) {
                     var id = value.RouteUID;
                     if (busList.length > 0) {
@@ -82,11 +82,11 @@
                             return;
                         }
                     }
-                    //公車路線名稱初始化
+                    
                     var bus = new Bus(value.RouteUID, value.RouteName.Zh_tw);
                     busList.push(bus);
 
-                    //公車站牌初始化
+                  
                     var markerList = [];   
                     var label = 1;
                     $.each(value.Stops, function (i, stop) {
@@ -106,7 +106,7 @@
                     busStopList.push(busStop); 
                 });
 
-                //公車路線初始化
+                
                 $.each(busRouteData[0], function (index, value) {
                     var id = value.RouteUID;
 
@@ -142,7 +142,7 @@
                     busRouteList.push(busRoute);
                 });
 
-                //選單初始化
+            
                 $.each(busList, function (index, value) {
                     $('#mainLine').append(
                         temp.replace('@RouteName', value.routeName).replace('@id',value.id)
