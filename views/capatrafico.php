@@ -107,7 +107,7 @@
   <body>
     <div id="map"></div>
     <div class="col-xs-12">
-      <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+      <!-- <input id="pac-input" class="controls" type="text" placeholder="Search Box"> -->
        <img class="img-trafico" src="../app/img/map/trafico.png" alt="">
     </div>
    
