@@ -137,7 +137,7 @@ switch (basename($_SERVER['PHP_SELF'])) {
 	<section class="section-general section-header-rp visible-xs visible-sm">
 	  <div class="col-xs-3">
 	    <a href="index.php">
-	      <img class="logo-menu-rp" src="app/img/home/logo.png">
+	      <img style="height: 59px;" class="logo-menu-rp" src="app/img/home/logo.png">
 	    </a>
 	  </div>
 	  <div class="sec-menu-rp">
