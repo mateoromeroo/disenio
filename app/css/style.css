@@ -96,6 +96,10 @@ body{
 	border-bottom: 2px solid white;
 }
 
+.f-map{
+	text-align: center;
+}
+
 .f-map a{
 	border: 2px white dashed;
 	border-radius: 10px;
@@ -3674,6 +3678,9 @@ textarea.form-control{
 		transition: all 0.4s;
 	}
 
+	.f-map{
+		text-align: left;
+	}
 
 }/*Fin 992*/
 

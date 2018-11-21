@@ -119,7 +119,7 @@
       var map, infoWindow;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
+          center: {lat: -12.055752, lng: -77.084356},
           zoom: 15
         });
 
