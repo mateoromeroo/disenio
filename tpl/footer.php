@@ -10,19 +10,19 @@
 		<div class="container">
 			<div class="col-xs-12">
 				<div class="col-xs-12 col-sm-4 col-md-3 f-txt f-txt1">
-					<img src="app/img/home/kuyayfooter.png" alt="">
+					<img src="app/img/home/logo.png" alt="">
 				</div>
 				<div class="col-xs-12 col-sm-4 col-md-5 f-txt f-txt2">
 					<center class="f-imgsCentro">
-					    <a href="https://www.facebook.com/kuyay.pe/" target="_blank">
+					    <a href="" target="_blank">
 					        <img class="f-img1" src="app/img/home/fb.png" alt="">
 					    </a>
-					    <a href="https://www.instagram.com/kuyaychocolates/" target="_blank">
+					    <a href="" target="_blank">
 					        <img class="f-img2" src="app/img/home/inst.png" alt="">
 					    </a>
 					</center>
 					<h5>
-						info@reycal.pe/ (+51) 969749967
+						info@grupo4
 					</h5>
 				</div>
 				<div class="col-xs-12 col-sm-4 col-md-4 f-txt f-txt3">
@@ -43,9 +43,9 @@
 		<div class="container">
 			<div class="col-xs-12">
 				<div class="f-back2-hdc col-xs-12 col-sm-offset-4 col-sm-8">
-					<a href="https://www.agenciahdc.com/" target="_blank" class="f-noa">
+					<a href="" target="_blank" class="f-noa">
 						<small>
-							<?= $lang['pie']['pie2'] ?>
+							Grupo 4
 						</small>
 					</a>
 				</div>

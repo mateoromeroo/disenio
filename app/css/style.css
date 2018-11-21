@@ -15,6 +15,10 @@ body{
 	font-style: italic;
 }
 
+.h-img-logo{
+	height: 15px;
+}
+
 /*** RUTAS***/
 	
 	/* Always set the map height explicitly to define the size of the div
@@ -90,6 +94,24 @@ body{
 
 .idiomaActivo{
 	border-bottom: 2px solid white;
+}
+
+.f-map a{
+	border: 2px white dashed;
+	border-radius: 10px;
+	padding: 5px 30px;
+	color: white;
+	text-decoration: none;
+	transition: all 0.3s;
+	display: inline-block;
+	margin-bottom: 30px;
+	font-weight: bold;
+}
+
+.f-map a:hover{
+	color: #54CDC9;
+	background: white;
+	
 }
 
 .h-hover-idioma .active{
@@ -2950,7 +2972,7 @@ textarea.form-control{
 }
 
 .not-sect2-noticias{
-	margin-bottom: 35px;
+	margin-bottom: 15px;
 }
 .not-sect1 {
 	height: 188px;

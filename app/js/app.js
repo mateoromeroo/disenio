@@ -41,7 +41,7 @@ $(document).on("scroll", function(){
         $('.h-hover-idioma').css('color','#0d6e44');
         $('.h-slash').css('color','#0d6e44');
 
-        $('#h-logo').attr('src','app/img/home/logocambio2.png');
+        // $('#h-logo').attr('src','app/img/home/logo.png');
         
        
         $(".h-opcs1").hover(function(){
@@ -108,7 +108,7 @@ $(document).on("scroll", function(){
             'background-color':'transparent',
             'border-bottom':'none',
         });
-        $('#h-logo').attr('src','app/img/home/logocambio1.png');
+        // $('#h-logo').attr('src','app/img/home/logo.png');
     	// $('.h-back1').css('background-color','transparent');
         $('.h-opcs').css('color','white');
         $('.h-slash').css('color','white');
