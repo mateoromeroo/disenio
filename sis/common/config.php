@@ -25,16 +25,16 @@ define("MAIL_ALTBODY","Mensaje de Intranet - Corapsac");
 //FIN
 
 // DATOS DE EMPRESA QUE DESARROLLA
-define('EMP_NAME', 'Tu Ruta');
-define('EMP_SLOGAN', 'Tu web preferida');
+define('EMP_NAME', 'Tu Transporte');
+define('EMP_SLOGAN', 'Tu web de Transporte favorita');
 define('EMP_FB','');
 define('EMP_WEB','');
 // fin
 
 // ANIMACIÓN INICIAL
 define('BACKGROUND_GO', '#004d3e');
-define('EMP_NAME_GO', '<b>Tu Ruta</b>');
-define('EMP_SLOGAN_GO', 'Tu web preferida');
+define('EMP_NAME_GO', '<b>Tu Transporte</b>');
+define('EMP_SLOGAN_GO', 'Tu web de Transporte favorita');
 define('BACKGROUND_END', '#fff');
 define('COLOR_GO', '#fff');
 define('COLOR_END', '#004d3e');
@@ -44,7 +44,7 @@ define('TIME_REDIRECT','3000');
 
 
 // DATOS DE CLIENTE
-define('CLI_NAME', 'Tu Ruta'); //HDC: NOMBRE DEL CLIENTE
+define('CLI_NAME', 'Tu Transporte'); //HDC: NOMBRE DEL CLIENTE
 // fin
 
 

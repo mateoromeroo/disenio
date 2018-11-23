@@ -82,6 +82,7 @@ body{
     margin-top: 80px;
     opacity: 1;
     animation: formLog 1.5s;
+    background: cadetblue;
 }
 
 @keyframes formLog{

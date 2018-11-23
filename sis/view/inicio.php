@@ -89,8 +89,8 @@
     </div>
     
     <footer>
-      <center class="foot">
-        <a href="https://agenciahdc.com/" target="_blank"><small>Desarrollado por HDC</small></a>
+      <center class="foot" style="height: 30px;">
+        
       </center>
       <?php include '../modules/form_mask.php'; ?>  
     </footer>
