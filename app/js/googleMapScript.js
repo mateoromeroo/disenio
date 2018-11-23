@@ -13,7 +13,7 @@ var busSstopApi = 'https://gist.githubusercontent.com/Mantarraya/7491fcf97597d94
 function initMap() {
     var kaohsiungStation = { lat: -12.041946313086456, lng: -77.0763350912956 };
     map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 15
+        zoom: 13.5
 ,        center: kaohsiungStation
     });
 }

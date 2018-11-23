@@ -254,6 +254,11 @@ body{
 	top: -50px;
 }
 
+.f-txt3{
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+
 .ini-adorno {
     font-weight: bold;
     width: 35%;
@@ -507,9 +512,7 @@ footer{
 .f-txt2{
 	margin-top: 45px;
 }
-.f-txt3{
-	margin-top: 45px;
-}
+
 .f-txt>h5{
 	color: #2f2f2f !important;
 	-webkit-color: #2f2f2f;
@@ -1253,12 +1256,8 @@ footer{
     margin-bottom: 50px;*/
 }
 .cont-sect2{
-	background-image: url(../img/contactenos/trama2.png);
+	background: #F3F3F3;
     height: 150px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    /*padding: 35px 0px 55px 0px;*/
     color: white;
     /*margin-top: 60px;
     margin-bottom: 50px;*/
@@ -1435,7 +1434,7 @@ textarea.form-control{
 }
 .not-sect2-noticias{
 	padding: 0 30px;
-	font-size: 40px;
+	font-size: 28px;
 	color: #124e41;
 	font-weight: bold;
 	margin-bottom: 20px;
@@ -2562,7 +2561,7 @@ th, td {
 	}
 	
 
-	.f-txt2, .f-txt3{
+	.f-txt2{
 		margin-top: 38px;
 	}
 
@@ -3299,6 +3298,9 @@ textarea.form-control{
     .sec-menu-rp {
         padding: 14px 15px 0px 5px;
     }
+    .not-sect2-noticias{
+    	font-size: 36px;
+    }
 
 
 
@@ -3373,7 +3375,7 @@ textarea.form-control{
 	    /*text-align: center;*/
 	    margin-bottom: 0px;
 	}
-	.f-txt2, .f-txt3{
+	.f-txt2{
 		margin-top: 45px;
 	}
 	.f-back2-hdc{
@@ -3778,10 +3780,7 @@ textarea.form-control{
 		margin-top: 20px;
 	    margin-bottom: 15px;
 	}
-	.f-txt3{
-		margin-top: 30px;
-	    margin-bottom: 15px;
-	}
+	
 	.ini-sect5{
 	   /*height: 595px;*/
 	   padding: 65px 0px 53px 0px;

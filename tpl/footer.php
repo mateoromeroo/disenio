@@ -27,9 +27,7 @@
 				</div>
 				<div class="col-xs-12 col-sm-4 col-md-4 f-txt f-txt3">
 					<div class="f-imgsDer col-xs-12">
-						<img src="app/img/home/1.png" alt="">
-						<img class="f-imgCentro" src="app/img/home/2.png" alt="">
-						<img src="app/img/home/premio.png" alt="">
+						<img style="height: 102px;" src="app/img/home/bus.png" alt="">
 					</div>
 					
 					<h5 class="ab">

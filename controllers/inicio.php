@@ -1,7 +1,7 @@
 <?php 
 
-require_once 'sis/common/config.php';
-require_once 'sis/models/general.class.php';
+require_once 'intranet/common/config.php';
+require_once 'intranet/models/general.class.php';
 include 'models/web.class.php';
 include 'functions/functions.php';
 $obj = new Catalogo_web();

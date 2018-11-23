@@ -12,12 +12,6 @@
 			<div class="container">
 				<div class="col-xs-12 col-sm-offset-1 col-sm-10">
 					<div class="rutas-sect2-tit not-sect2-noticias col-xs-12">
-						¿ A donde desea ir?
-					</div>
-					<div class="f-map col-xs-12">
-						<a href="views/rutasyautomcompletado.html" target="_blank">Buscar Ruta</a>
-					</div>
-					<div class="rutas-sect2-tit not-sect2-noticias col-xs-12">
 						¿ Desea ver como va el tráfico?
 					</div>
 					<div class="f-map col-xs-12">
@@ -34,6 +28,12 @@
 					</div>
 					<div class="f-map col-xs-12">
 						<a href="views/buscadorAutocompletado.html" target="_blank">Buscar lugar</a>
+					</div>
+					<div class="rutas-sect2-tit not-sect2-noticias col-xs-12">
+						¿ A donde desea ir?
+					</div>
+					<div class="f-map col-xs-12">
+						<a href="views/rutasyautomcompletado.html" target="_blank">Buscar Ruta</a>
 					</div>
 				</div>
 			
