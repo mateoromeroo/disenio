@@ -261,7 +261,6 @@
                               <div class="section-input">
                                 <label>Descripción 1 en inglés:</label>
                                 <textarea id="emp-descripcion1-ingles" type="text" class="form-control prod-txta" name="empresa_descripcion1_ingles" value="<?= $empresa_descripcion1_ingles ?>"><?= $empresa_descripcion1_ingles; ?></textarea>
-                                <?php echo "<br><br><br><br>vista---->".$col['empresa_descripcion1_ingles']; ?>
                               </div>     
                             </div>
 
