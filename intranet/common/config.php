@@ -26,7 +26,7 @@ define("MAIL_ALTBODY","Mensaje de Intranet - Corapsac");
 //FIN
 
 // DATOS DE EMPRESA QUE DESARROLLA
-define('EMP_NAME', 'Kuyay');
+define('EMP_NAME', 'Tu Transporte');
 define('EMP_SLOGAN', 'Chocolate de la Amazonía Peruana');
 define('EMP_FB','https://www.facebook.com/hdcperu/?fref=ts');
 define('EMP_WEB','https://agenciahdc.com/');
@@ -34,7 +34,7 @@ define('EMP_WEB','https://agenciahdc.com/');
 
 // ANIMACIÓN INICIAL
 define('BACKGROUND_GO', '#004d3e');
-define('EMP_NAME_GO', '<b>Kuyay</b>');
+define('EMP_NAME_GO', '<b>Tu Transporte</b>');
 define('EMP_SLOGAN_GO', 'Chocolate de la Amazonía Peruana');
 define('BACKGROUND_END', '#fff');
 define('COLOR_GO', '#fff');
@@ -45,7 +45,7 @@ define('TIME_REDIRECT','3000');
 
 
 // DATOS DE CLIENTE
-define('CLI_NAME', 'Kuyay'); //HDC: NOMBRE DEL CLIENTE
+define('CLI_NAME', 'Tu Transporte'); //HDC: NOMBRE DEL CLIENTE
 // fin
 
 
