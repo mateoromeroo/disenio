@@ -105,130 +105,81 @@
           </div>
 
           <div class="obj-form">
-            <div class="col-xs-12 col-md-6 section-input-noticia">
+            
+            <div class="col-xs-12 col-md-6 section-input-empresa">
               <label>Orden:</label>
-              <input type="number" class="form-control" name="noticia_orden" required>
+              <input required type="number" class="form-control" name="empresa_orden">
             </div>
-            <div class="col-xs-12 col-md-6 section-input-noticia">
-              <label>Fecha</label>
-              <input type="text" class="form-control" name="noticia_fecha" required>
+
+            <div class="col-xs-12 col-md-6 section-input-empresa">
+              <label>Link de facebook:</label>
+              <input required type="text" class="form-control" name="empresa_link_face">
             </div>
-            <div class="col-xs-12 col-md-6 section-input-noticia">
-              <label>Título:</label>
-              <input type="text" class="form-control" name="noticia_titulo" required>
+           
+
+            <div class="col-xs-12 col-md-6 section-input-empresa">
+              <label>Nombre de la Empresa:</label>
+              <input type="text" class="form-control" name="empresa_nombre">
             </div>
-            <div class="col-xs-12 col-md-6 section-input-noticia">
-              <label>Título en ingles:</label>
-              <input type="text" class="form-control" name="noticia_titulo_ingles" required>
+            <div class="col-xs-12 col-md-6 section-input-empresa">
+              <label>Nombre de la Empresa en ingles:</label>
+              <input required type="text" class="form-control" name="empresa_nombre_ingles">
             </div>
-            <div class="col-xs-12 col-md-6 section-input-noticia">
-              <label>Subtítulo:</label>
-              <input type="text" class="form-control" name="noticia_subtitulo" required>
-            </div>
-            <div class="col-xs-12 col-md-6 section-input-noticia">
-              <label>Subtítulo en ingles:</label>
-              <input type="text" class="form-control" name="noticia_subtitulo_ingles" required>
-            </div>
-            <!-- <div class="col-xs-12 col-md-6 section-input-noticia">
-              <label>Descripción 1</label>
-              <input type="text" class="form-control" name="noticia_descripcion" required>
-            </div>
-            <div class="col-xs-12 col-md-6 section-input-noticia">
-              <label>Descripción 1 en ingles</label>
-              <input type="text" class="form-control" name="noticia_descripcion_ingles" required>
-            </div>
-            <div class="col-xs-12 col-md-6 section-input-noticia">
-              <label>Descripción 2</label>
-              <input type="text" class="form-control" name="noticia_descripcion2" required>
-            </div>
-            <div class="col-xs-12 col-md-6 section-input-noticia">
-              <label>Descripción 2 en ingles</label>
-              <input type="text" class="form-control" name="noticia_descripcion2_ingles" required>
-            </div>
-            <div class="col-xs-12 col-md-6 section-input-noticia">
-              <label>Descripción 3</label>
-              <input type="text" class="form-control" name="noticia_descripcion3" required>
-            </div>
-            <div class="col-xs-12 col-md-6 section-input-noticia">
-              <label>Descripción 3 en ingles</label>
-              <input type="text" class="form-control" name="noticia_descripcion3_ingles" required>
-            </div> -->
+            
             <div class="col-xs-12 col-sm-6">
               <div class="section-input">
                 <label>Descripción 1:</label>
-                <textarea id="not-descripcion1" type="text" class="form-control prod-txta" name="noticia_descripcion" value="<?= $noticia_descripcion ?>" required></textarea>
-                <b style="font-size: 12px;"></b>
+                <textarea required id="emp-descripcion1" type="text" class="form-control prod-txta" name="empresa_descripcion1" value="<?= $empresa_descripcion1 ?>"></textarea>
               </div>     
             </div>
             <div class="col-xs-12 col-sm-6">
               <div class="section-input">
                 <label>Descripción 1 en inglés:</label>
-                <textarea id="not-descripcion1-ingles" type="text" class="form-control prod-txta" name="noticia_descripcion_ingles" value="<?= $noticia_descripcion_ingles ?>" required></textarea>
-                <b style="font-size: 12px;"></b>
+                <textarea required id="emp-descripcion1-ingles" type="text" class="form-control prod-txta" name="empresa_descripcion1_ingles" value="<?= $empresa_descripcion1_ingles ?>"></textarea>
               </div>     
             </div>
+
             <div class="col-xs-12 col-sm-6">
               <div class="section-input">
                 <label>Descripción 2:</label>
-                <textarea id="not-descripcion2" type="text" class="form-control prod-txta" name="noticia_descripcion2" value="<?= $noticia_descripcion2 ?>" required></textarea>
-                <b style="font-size: 12px;"></b>
+                <textarea required id="emp-descripcion2" type="text" class="form-control prod-txta" name="empresa_descripcion2" value="<?= $empresa_descripcion2 ?>"></textarea>
               </div>     
             </div>
             <div class="col-xs-12 col-sm-6">
               <div class="section-input">
                 <label>Descripción 2 en inglés:</label>
-                <textarea id="not-descripcion2-ingles" type="text" class="form-control prod-txta" name="noticia_descripcion2_ingles" value="<?= $noticia_descripcion2_ingles ?>" required></textarea>
-                <b style="font-size: 12px;"></b>
+                <textarea required id="emp-descripcion2-ingles" type="text" class="form-control prod-txta" name="empresa_descripcion2_ingles" value="<?= $empresa_descripcion2_ingles ?>" ></textarea>
               </div>     
             </div>
             <div class="col-xs-12 col-sm-6">
               <div class="section-input">
                 <label>Descripción 3:</label>
-                <textarea id="not-descripcion3" type="text" class="form-control prod-txta" name="noticia_descripcion3" value="<?= $noticia_descripcion3 ?>" required></textarea>
-                <b style="font-size: 12px;"></b>
+                <textarea id="emp-descripcion3" type="text" class="form-control prod-txta" name="empresa_descripcion3" value="<?= $empresa_descripcion3 ?>"></textarea>
               </div>     
             </div>
             <div class="col-xs-12 col-sm-6">
               <div class="section-input">
                 <label>Descripción 3 en inglés:</label>
-                <textarea id="not-descripcion3-ingles" type="text" class="form-control prod-txta" name="noticia_descripcion3_ingles" value="<?= $noticia_descripcion3_ingles ?>" required></textarea>
-                <b style="font-size: 12px;"></b>
+                <textarea id="emp-descripcion3-ingles" type="text" class="form-control prod-txta" name="empresa_descripcion3_ingles" value="<?= $empresa_descripcion3_ingles ?>"></textarea>
               </div>     
             </div>
 
 
-            <div class="col-xs-12 section-input-noticia">
+            <div class="col-xs-12 section-input-empresa">
                 <label>Imagen 1:</label>
-                  <input type="file" class="form-control btn-success" name="noticia_imagen" id="empresa-imagen-1" accept="image/*" value="" required>
+                  <input required type="file" class="form-control btn-success" name="empresa_imagen1" id="empresa-imagen-1" accept="image/*" value="">
                   <small><b>Nota:</b> Medidas recomendadas 800 píxeles de ancho por 800 píxeles de alto. Peso máximo de 250KB.</small>
             </div>
-            <div class="col-xs-12 section-input-noticia">
+            <div class="col-xs-12 section-input-empresa">
                 <label>Imagen 2:</label>
-                  <input type="file" class="form-control btn-success" name="noticia_imagen2" id="empresa-imagen-2" accept="image/*" value="">
+                  <input type="file" class="form-control btn-success" name="empresa_imagen2" id="empresa-imagen-2" accept="image/*" value="">
                   <small><b>Nota:</b> Medidas recomendadas 800 píxeles de ancho por 800 píxeles de alto. Peso máximo de 250KB.</small>
             </div>
-            <div class="col-xs-12 section-input-noticia">
+            <div class="col-xs-12 section-input-empresa">
                 <label>Imagen 3:</label>
-                  <input type="file" class="form-control btn-success" name="noticia_imagen3" id="empresa-imagen-3" accept="image/*" value="">
+                  <input type="file" class="form-control btn-success" name="empresa_imagen3" id="empresa-imagen-3" accept="image/*" value="">
                   <small><b>Nota:</b> Medidas recomendadas 800 píxeles de ancho por 800 píxeles de alto. Peso máximo de 250KB.</small>
             </div> 
-            <!-- <div class="col-xs-12 col-md-6 section-input-noticia">
-              <label>Imagen 1</label>
-              <input type="text" class="form-control" name="noticia_imagen" required>
-            </div>
-            <div class="col-xs-12 col-md-6 section-input-noticia">
-              <label>Imagen 2</label>
-              <input type="text" class="form-control" name="noticia_imagen2" required>
-            </div>
-            <div class="col-xs-12 col-md-6 section-input-noticia">
-              <label>Imagen 3</label>
-              <input type="text" class="form-control" name="noticia_imagen3" required>
-            </div> -->
-            <div class="col-xs-12 col-md-6 section-input-noticia">
-              <label>Link de facebook</label>
-              <input type="text" class="form-control" name="noticia_link_face" required>
-            </div>
-            
             
             <!-- hidden obj -->
             <div class="section-input">

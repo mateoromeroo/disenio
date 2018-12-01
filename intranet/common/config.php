@@ -1,12 +1,13 @@
 <?php 
 
 // DATOS DE CONEXIÓN A BD
-define('HOST', 'us-cdbr-iron-east-01.cleardb.net');
-define('DATA_BASE', 'heroku_44f5b98f341b91a');
+define('HOST', 'localhost');
+// define('DATA_BASE', 'hdc_kuyay_bd');
 // define('USER_DB', 'hdc_kuyay_user');
 // define('PASS_DB', 'Kuyay2018&%');
-define('USER_DB', 'bc001144c9129b');
-define('PASS_DB', '14e28433');
+define('DATA_BASE', 'tutransporte_bd');
+define('USER_DB', 'root');
+define('PASS_DB', '');
 // fin
 
 // DATOS GENERALES
@@ -25,16 +26,16 @@ define("MAIL_ALTBODY","Mensaje de Intranet - Corapsac");
 //FIN
 
 // DATOS DE EMPRESA QUE DESARROLLA
-define('EMP_NAME', 'Tu Transporte');
-define('EMP_SLOGAN', 'Tu web de Transporte favorita');
-define('EMP_FB','');
-define('EMP_WEB','');
+define('EMP_NAME', 'Kuyay');
+define('EMP_SLOGAN', 'Chocolate de la Amazonía Peruana');
+define('EMP_FB','https://www.facebook.com/hdcperu/?fref=ts');
+define('EMP_WEB','https://agenciahdc.com/');
 // fin
 
 // ANIMACIÓN INICIAL
 define('BACKGROUND_GO', '#004d3e');
-define('EMP_NAME_GO', '<b>Tu Transporte</b>');
-define('EMP_SLOGAN_GO', 'Tu web de Transporte favorita');
+define('EMP_NAME_GO', '<b>Kuyay</b>');
+define('EMP_SLOGAN_GO', 'Chocolate de la Amazonía Peruana');
 define('BACKGROUND_END', '#fff');
 define('COLOR_GO', '#fff');
 define('COLOR_END', '#004d3e');
@@ -44,7 +45,7 @@ define('TIME_REDIRECT','3000');
 
 
 // DATOS DE CLIENTE
-define('CLI_NAME', 'Tu Transporte'); //HDC: NOMBRE DEL CLIENTE
+define('CLI_NAME', 'Kuyay'); //HDC: NOMBRE DEL CLIENTE
 // fin
 
 

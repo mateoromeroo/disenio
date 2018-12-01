@@ -39,6 +39,8 @@ $msg = '';
 
     $arg_btn_home = array(
         //array('icono','titulo','link','hidden/block')
+        //  array('th-large'  ,'<br>Módulo de<br> Categorías'   ,'categoria.php'    , "block")
+        // ,array('th'  ,'<br>Módulo de<br> Productos'    ,'producto.php'    , "block")
         array('list-alt'  ,'<br>Módulo de<br> Noticias'   ,'noticia.php'    , "block")
         ,array('list-alt'  ,'<br>Módulo de<br> Empresas'   ,'empresa.php'    , "block")
         ,array('list-alt'  ,'<br>Módulo de<br> Quejas'   ,'quejas.php'    , "block")
@@ -101,23 +103,21 @@ $msg = '';
             case 'agregar-exe':
 
                 $arg = array(
-                        $noticia_orden
-                        ,$noticia_titulo
-                        ,$noticia_subtitulo
-                        ,$noticia_descripcion
-                        ,$noticia_descripcion2
-                        ,$noticia_descripcion3
-                        ,$noticia_imagen
-                        ,$noticia_imagen2
-                        ,$noticia_imagen3
-                        ,$noticia_link_face
-                        // ,$noticia_activo <----- No va, por que en otra vista ya se le incluye un valr por defecto (1)
-                        ,$noticia_titulo_ingles
-                        ,$noticia_subtitulo_ingles
-                        ,$noticia_descripcion_ingles
-                        ,$noticia_descripcion2_ingles
-                        ,$noticia_descripcion3_ingles
-                        ,$noticia_fecha
+                        // empresa_id <------ NO va el id porque es autoincrementable en el insert.
+                        $empresa_orden
+                        // ,$empresa_activo <----- No va, por que en otra vista ya se le incluye un valr por defecto (1)
+                        ,$empresa_nombre
+                        ,$empresa_nombre_ingles
+                        ,$empresa_descripcion1
+                        ,$empresa_descripcion1_ingles
+                        ,$empresa_descripcion2
+                        ,$empresa_descripcion2_ingles
+                        ,$empresa_descripcion3
+                        ,$empresa_descripcion3_ingles
+                        ,$empresa_imagen1
+                        ,$empresa_imagen2
+                        ,$empresa_imagen3
+                        ,$empresa_link_face
                     );
 
                 $result = $obj->agregar($arg);
@@ -132,24 +132,21 @@ $msg = '';
             case 'modificar-exe':
                
                 $arg = array(
-                        'id' => $noticia_id
+                        'id' => $empresa_id
                         ,'fields' => array(
-                                $noticia_orden
-                                ,$noticia_titulo
-                                ,$noticia_subtitulo
-                                ,$noticia_descripcion
-                                ,$noticia_descripcion2
-                                ,$noticia_descripcion3
-                                ,$noticia_imagen
-                                ,$noticia_imagen2
-                                ,$noticia_imagen3
-                                ,$noticia_link_face
-                                ,$noticia_titulo_ingles
-                                ,$noticia_subtitulo_ingles
-                                ,$noticia_descripcion_ingles
-                                ,$noticia_descripcion2_ingles
-                                ,$noticia_descripcion3_ingles
-                                ,$noticia_fecha
+                                $empresa_orden
+                                ,$empresa_nombre
+                                ,$empresa_nombre_ingles
+                                ,$empresa_descripcion1
+                                ,$empresa_descripcion1_ingles
+                                ,$empresa_descripcion2
+                                ,$empresa_descripcion2_ingles
+                                ,$empresa_descripcion3
+                                ,$empresa_descripcion3_ingles
+                                ,$empresa_imagen1
+                                ,$empresa_imagen2
+                                ,$empresa_imagen3
+                                ,$empresa_link_face                              
                         )
                     );
 
@@ -157,7 +154,7 @@ $msg = '';
 
                 if($result == 1){
                     $msg = time_alert_text('success',3000,'Se guardaron los datos correctamente.En breve será redireccionado...');
-                    $msg.= script_redirect('noticia.php',3000);
+                    $msg.= script_redirect('empresa.php',3000);
                 }else{
                     $msg = alert_text('danger','Hubo un error, informar a los encargados.');
                 }
@@ -171,6 +168,7 @@ $msg = '';
 
     #Implementar
     #Funcionalidades de botón/redirección
+
     if($btn_op_form!=''){      
         switch($btn_op_form){
             case 'agregar-form':
@@ -185,26 +183,23 @@ $msg = '';
                 $usuario_id = $btn_id;
                 $result = $obj->listarxId($btn_id);
                 foreach($result as $col){
-                    $noticia_id = $col['noticia_id'];
-                    $noticia_orden = $col['noticia_orden'];
-                    $noticia_titulo = $col['noticia_titulo'];
-                    $noticia_subtitulo = $col['noticia_subtitulo'];
-                    $noticia_descripcion = $col['noticia_descripcion'];
-                    $noticia_descripcion2 = $col['noticia_descripcion2'];
-                    $noticia_descripcion3 = $col['noticia_descripcion3'];
-                    $noticia_imagen = $col['noticia_imagen'];
-                    $noticia_imagen2 = $col['noticia_imagen2'];
-                    $noticia_imagen3 = $col['noticia_imagen3'];
-                    $noticia_link_face = $col['noticia_link_face'];
-                    $noticia_titulo_ingles = $col['noticia_titulo_ingles'];
-                    $noticia_subtitulo_ingles = $col['noticia_subtitulo_ingles'];
-                    $noticia_descripcion_ingles = $col['noticia_descripcion_ingles'];
-                    $noticia_descripcion2_ingles = $col['noticia_descripcion2_ingles'];
-                    $noticia_descripcion3_ingles = $col['noticia_descripcion3_ingles'];
-                    $noticia_fecha = $col['noticia_fecha'];
+                    $empresa_id = $col['empresa_id'];
+                    $empresa_orden = $col['empresa_orden'];
+                    $empresa_nombre = $col['empresa_nombre'];
+                    $empresa_nombre_ingles = $col['empresa_nombre_ingles'];
+                    $empresa_descripcion1 = $col['empresa_descripcion1'];
+                    $empresa_descripcion1_ingles = $col['empresa_descripcion1_ingles'];
+                    $empresa_descripcion2 = $col['empresa_descripcion2'];
+                    $empresa_descripcion2_ingles = $col['empresa_descripcion2_ingles'];
+                    $empresa_descripcion3 = $col['empresa_descripcion3'];
+                    $empresa_descripcion3_ingles = $col['empresa_descripcion3_ingles'];
+                    $empresa_imagen1 = $col['empresa_imagen1'];
+                    $empresa_imagen2 = $col['empresa_imagen2'];
+                    $empresa_imagen3 = $col['empresa_imagen3'];
+                    $empresa_link_face = $col['empresa_link_face'];
                 }
-
-                $título_form = 'Modificar registro: <b style="color: #EB2929;">'.$noticia_titulo.'</b>';
+    
+                $título_form = 'Modificar registro: <b style="color: #EB2929;">'.$empresa_nombre.'</b>';
    
             break;
         }    

@@ -100,20 +100,20 @@
                               </b>
                             </big>
                             <br>
-                            <small><i>Imágenes actuales en la web.</i></small>
+                            <small><i>Imágenes actuales de las Empresas en la web.</i></small>
                           </p>
                           <div class="sec-img-actual">
                             <div class="col-xs-12 col-sm-6" style="margin-bottom: 30px;">
                               <button type="button" class="btn btn-default" data-toggle="modal" data-target="#exampleModal1" data-whatever="@mdo">
-                                <?php if (isset($empresa_imagen) and $empresa_imagen != '') {
-                                    $imgEmpresa1 = "app/img/empresas/$empresa_imagen";
+                                <?php if (isset($empresa_imagen1) and $empresa_imagen1 != '') {
+                                    $imgEmpresa1 = "app/img/empresas/$empresa_imagen1";
                                   }else{
                                     $imgEmpresa1 = "app/img/imgDefault2.png";
                                   } ?>
                                 <img class="img-responsive" src=<?= $imgEmpresa1; ?>>
                                 <br>           
                                 <p>Imagen 1</p>
-                                <small><?= $empresa_imagen; ?></small>
+                                <small><?= $empresa_imagen1; ?></small>
                               </button>
                             </div>
 
@@ -157,7 +157,7 @@
                                     <h4 class="modal-title" id="exampleModalLabel"></h4>
                                   </div>
                                   <div class="modal-body">
-                                    <?php if (isset($empresa_imagen) and $empresa_imagen != '') {
+                                    <?php if (isset($empresa_imagen1) and $empresa_imagen1 != '') {
                                       $imgEmpresaEmergente1 = "app/img/empresas/$empresa_imagen";
                                     }else{
                                       $imgEmpresaEmergente1 = "app/img/imgDefault2.png";
@@ -233,147 +233,69 @@
 
                             <div class="col-xs-12 col-sm-6">
                               <div class="section-input">
-                                <label>Fecha: </label>
-                                <input type="text" class="form-control" name="empresa_fecha" value="<?= $empresa_fecha; ?>">
+                                <label>Link de facebook:</label>
+                                <input type="text" class="form-control" name="empresa_link_face" value="<?= $empresa_link_face; ?>">
                               </div>                              
                             </div>
                                                        
                             <div class="col-xs-12 col-sm-6">
                               <div class="section-input">
-                                <label>Título:</label>
-                                <input type="text" class="form-control" name="empresa_titulo" value="<?= $empresa_titulo; ?>">
+                                <label>Nombre de la Empresa:</label>
+                                <input type="text" class="form-control" name="empresa_nombre" value="<?= $empresa_nombre; ?>">
                               </div>                              
                             </div>
                             <div class="col-xs-12 col-sm-6">
                               <div class="section-input">
-                                <label>Título en inglés:</label>
-                                <input type="text" class="form-control" name="empresa_titulo_ingles" value="<?= $empresa_titulo_ingles; ?>">
+                                <label>Nombre de la Empresa en inglés:</label>
+                                <input type="text" class="form-control" name="empresa_nombre_ingles" value="<?= $empresa_nombre_ingles; ?>">
                               </div>                              
                             </div>
-
-                            <div class="col-xs-12 col-sm-6">
-                              <div class="section-input">
-                                <label>Subtítulo:</label>
-                                <input type="text" class="form-control" name="empresa_subtitulo" value="<?= $empresa_subtitulo; ?>">
-                              </div>                              
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                              <div class="section-input">
-                                <label>Subtítulo en inglés:</label>
-                                <input type="text" class="form-control" name="empresa_subtitulo_ingles" value="<?= $empresa_subtitulo_ingles; ?>">
-                              </div>                              
-                            </div>
-
-                            <!-- <div class="col-xs-12 col-sm-6">
-                              <div class="section-input">
-                                <label>Descripción:</label>
-                                <input type="text" class="form-control" name="empresa_descripcion" value="<?= $empresa_descripcion; ?>">
-                              </div>                              
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                              <div class="section-input">
-                                <label>Descripción 1 en ingles:</label>
-                                <input type="text" class="form-control" name="empresa_descripcion_ingles" value="<?= $empresa_descripcion_ingles; ?>">
-                              </div>                              
-                            </div>
-
-                            <div class="col-xs-12 col-sm-6">
-                              <div class="section-input">
-                                <label>Descripción 2:</label>
-                                <input type="text" class="form-control" name="empresa_descripcion2" value="<?= $empresa_descripcion2; ?>">
-                              </div>                              
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                              <div class="section-input">
-                                <label>Descripción 2 en ingles:</label>
-                                <input type="text" class="form-control" name="empresa_descripcion2_ingles" value="<?= $empresa_descripcion2_ingles; ?>">
-                              </div>                              
-                            </div>
-
-                            <div class="col-xs-12 col-sm-6">
-                              <div class="section-input">
-                                <label>Descripción 3:</label>
-                                <input type="text" class="form-control" name="empresa_descripcion3" value="<?= $empresa_descripcion3; ?>">
-                              </div>                              
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                              <div class="section-input">
-                                <label>Descripción 3 en ingles:</label>
-                                <input type="text" class="form-control" name="empresa_descripcion3_ingles" value="<?= $empresa_descripcion3_ingles; ?>">
-                              </div>                              
-                            </div> -->
 
                             <div class="col-xs-12 col-sm-6">
                               <div class="section-input">
                                 <label>Descripción 1:</label>
-                                <textarea id="not-descripcion1" type="text" class="form-control prod-txta" name="empresa_descripcion" value="<?= $empresa_descripcion ?>" required><?= $empresa_descripcion; ?></textarea>
-                                <b style="font-size: 12px;">Nota: Si va a copiar texto de un word, por favor primero copiar en un block de notas, y de ahi copiar recién al cuadro de texto.</b>
+                                <textarea id="emp-descripcion1" type="text" class="form-control prod-txta" name="empresa_descripcion1" value="<?= $empresa_descripcion1 ?>"><?= $empresa_descripcion1; ?></textarea>
                               </div>     
                             </div>
                             <div class="col-xs-12 col-sm-6">
                               <div class="section-input">
                                 <label>Descripción 1 en inglés:</label>
-                                <textarea id="not-descripcion1-ingles" type="text" class="form-control prod-txta" name="empresa_descripcion_ingles" value="<?= $empresa_descripcion_ingles ?>" required><?= $empresa_descripcion_ingles; ?></textarea>
-                                <b style="font-size: 12px;">Nota: Si va a copiar texto de un word, por favor primero copiar en un block de notas, y de ahi copiar recién al cuadro de texto.</b>
+                                <textarea id="emp-descripcion1-ingles" type="text" class="form-control prod-txta" name="empresa_descripcion1_ingles" value="<?= $empresa_descripcion1_ingles ?>"><?= $empresa_descripcion1_ingles; ?></textarea>
+                                <?php echo "<br><br><br><br>vista---->".$col['empresa_descripcion1_ingles']; ?>
                               </div>     
                             </div>
+
                             <div class="col-xs-12 col-sm-6">
                               <div class="section-input">
                                 <label>Descripción 2:</label>
-                                <textarea id="not-descripcion2" type="text" class="form-control prod-txta" name="empresa_descripcion2" value="<?= $empresa_descripcion2 ?>" required><?= $empresa_descripcion2; ?></textarea>
-                                <b style="font-size: 12px;">Nota: Si va a copiar texto de un word, por favor primero copiar en un block de notas, y de ahi copiar recién al cuadro de texto.</b>
+                                <textarea id="emp-descripcion2" type="text" class="form-control prod-txta" name="empresa_descripcion2" value="<?= $empresa_descripcion2 ?>"><?= $empresa_descripcion2; ?></textarea>
                               </div>     
                             </div>
                             <div class="col-xs-12 col-sm-6">
                               <div class="section-input">
                                 <label>Descripción 2 en inglés:</label>
-                                <textarea id="not-descripcion2-ingles" type="text" class="form-control prod-txta" name="empresa_descripcion2_ingles" value="<?= $empresa_descripcion2_ingles ?>" required><?= $empresa_descripcion2_ingles; ?></textarea>
-                                <b style="font-size: 12px;">Nota: Si va a copiar texto de un word, por favor primero copiar en un block de notas, y de ahi copiar recién al cuadro de texto.</b>
+                                <textarea id="emp-descripcion2-ingles" type="text" class="form-control prod-txta" name="empresa_descripcion2_ingles" value="<?= $empresa_descripcion2_ingles ?>"><?= $empresa_descripcion2_ingles; ?></textarea>
                               </div>     
                             </div>
+
                             <div class="col-xs-12 col-sm-6">
                               <div class="section-input">
                                 <label>Descripción 3:</label>
-                                <textarea id="not-descripcion3" type="text" class="form-control prod-txta" name="empresa_descripcion3" value="<?= $empresa_descripcion3 ?>" required><?= $empresa_descripcion3; ?></textarea>
-                                <b style="font-size: 12px;">Nota: Si va a copiar texto de un word, por favor primero copiar en un block de notas, y de ahi copiar recién al cuadro de texto.</b>
+                                <textarea id="emp-descripcion3" type="text" class="form-control prod-txta" name="empresa_descripcion3" value="<?= $empresa_descripcion3 ?>"><?= $empresa_descripcion3; ?></textarea>
                               </div>     
                             </div>
                             <div class="col-xs-12 col-sm-6">
                               <div class="section-input">
                                 <label>Descripción 3 en inglés:</label>
-                                <textarea id="not-descripcion3-ingles" type="text" class="form-control prod-txta" name="empresa_descripcion3_ingles" value="<?= $empresa_descripcion3_ingles ?>" required><?= $empresa_descripcion3_ingles; ?></textarea>
-                                <b style="font-size: 12px;">Nota: Si va a copiar texto de un word, por favor primero copiar en un block de notas, y de ahi copiar recién al cuadro de texto.</b>
+                                <textarea id="emp-descripcion3-ingles" type="text" class="form-control prod-txta" name="empresa_descripcion3_ingles" value="<?= $empresa_descripcion3_ingles ?>"><?= $empresa_descripcion3_ingles; ?></textarea>
                               </div>     
                             </div>
-
-
-
-                            <!-- <div class="col-xs-12 col-sm-6 col-md-4">
-                              <div class="section-input">
-                                <label>Imagen 1:</label>
-                                <input type="text" class="form-control" name="empresa_imagen" value="<?= $empresa_imagen; ?>">
-                              </div>                              
-                            </div>
-
-                            <div class="col-xs-12 col-sm-6 col-md-4">
-                              <div class="section-input">
-                                <label>Imagen 2:</label>
-                                <input type="text" class="form-control" name="empresa_imagen2" value="<?= $empresa_imagen2; ?>">
-                              </div>                              
-                            </div>
-
-                            <div class="col-xs-12 col-sm-6 col-md-4">
-                              <div class="section-input">
-                                <label>Imagen 3:</label>
-                                <input type="text" class="form-control" name="empresa_imagen3" value="<?= $empresa_imagen3; ?>">
-                              </div>                              
-                            </div> -->
 
                             <div class="col-xs-12 np">
                               <div class="col-xs-12">
                                 <div class="section-input">
                                   <label>Imagen 1:</label>
-                                  <input type="file" class="form-control btn-success" name="empresa_imagen" value="<?= $empresa_imagen ?>" id="empresa-imagen-1" accept="image/*">
+                                  <input type="file" class="form-control btn-success" name="empresa_imagen1" value="<?= $empresa_imagen1 ?>" id="empresa-imagen-1" accept="image/*">
                                 </div>
                               </div>
                               <div class="col-xs-12">
@@ -390,10 +312,10 @@
                               </div>
 
                               <div class="col-xs-12 col-sm-6">
-                              <div class="section-input">
+                              <!-- <div class="section-input">
                                 <label>Link de facebook:</label>
                                 <input type="text" class="form-control" name="empresa_link_face" value="<?= $empresa_link_face; ?>">
-                              </div>                           
+                              </div>  -->                          
                             </div>
 
                             </div>
@@ -426,7 +348,7 @@
 
                             <!-- hidden obj -->
                             <input type="hidden"  autocomplete="off" name="empresa_id" value="<?= $empresa_id; ?>">
-                            <input type="hidden"  autocomplete="off" name="empresa_imagen1_c" value="<?= $empresa_imagen; ?>">
+                            <input type="hidden"  autocomplete="off" name="empresa_imagen1_c" value="<?= $empresa_imagen1; ?>">
                             <input type="hidden"  autocomplete="off" name="empresa_imagen2_c" value="<?= $empresa_imagen2; ?>">
                             <input type="hidden"  autocomplete="off" name="empresa_imagen3_c" value="<?= $empresa_imagen3; ?>">  
                           </div>                           

@@ -31,7 +31,7 @@ class Catalogo_web extends generalQuery
                 $htmlSelect3 .= '
 
                     <div class="noticias-alto pro-sect2-cuadro pro-sect2-cuadro1 col-xs-12 col-sm-6 col-md-4">
-                        <form action="noticiaDetalle.php" method="post">
+                        <form action="noticiaDetalle.php" method="get">
                             <button style="border: none; padding: 0; outline: none;" type="submit" name="noticia-id" class="btn-prod" value="'.$col['noticia_id'].'">
                                 <div class="pro-sect2-img col-xs-12">
                                     <img id="prod1" class="img-responsive" src="intranet/view/app/img/noticias/'.$col['noticia_imagen'].'" alt="">
@@ -136,6 +136,7 @@ class Catalogo_web extends generalQuery
                     ,array('and','n.noticia_id','=',$noticiaId)
                 )
             );
+            print_r($arg);
 
             $this->setSelectArg($arg);
             $result = $this->selectData();
@@ -155,24 +156,10 @@ class Catalogo_web extends generalQuery
             $htmlDescripcionIngles1 = $col['noticia_descripcion_ingles'];
             $htmlDescripcionIngles2 = $col['noticia_descripcion2_ingles'];
             $htmlDescripcionIngles3 = $col['noticia_descripcion3_ingles'];
-
-            $htmlImg1 = 'intranet/view/app/img/noticias/'.$col['noticia_imagen'].'"';
-            $htmlImg2 = 'intranet/view/app/img/noticias/'.$col['noticia_imagen2'].'"';
-            $htmlImg3 = 'intranet/view/app/img/noticias/'.$col['noticia_imagen3'].'"';
-
-            // echo '111-->'.$col['noticia_imagen'];
-            // echo '222-->'.$col['noticia_imagen2'];
-            // echo '333-->'.$col['noticia_imagen3'];
-
-            
-            
+    
             $htmlImgNotNombre1 = $col['noticia_imagen'];
             $htmlImgNotNombre2 = $col['noticia_imagen2'];
             $htmlImgNotNombre3 = $col['noticia_imagen3'];
-
-            // echo '011-->'.$htmlImgNotNombre1;
-            // echo '222-->'.$htmlImgNotNombre2;
-            // echo '333-->'.$htmlImgNotNombre3;
 
             $htmlFace = $col['noticia_link_face'];
             $htmlFecha = $col['noticia_fecha'];
@@ -190,9 +177,6 @@ class Catalogo_web extends generalQuery
                 ,$htmlDescripcionIngles1
                 ,$htmlDescripcionIngles2
                 ,$htmlDescripcionIngles3
-                ,$htmlImg1
-                ,$htmlImg2
-                ,$htmlImg3
                 ,$htmlFace
                 ,$htmlFecha
                 ,$htmlOrden
@@ -743,13 +727,13 @@ class Catalogo_web extends generalQuery
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-5">
                             <div class="not-sect2-tit col-xs-12">
-                                '.$col['empresa_titulo'].'
+                                '.$col['empresa_nombre'].'
                             </div>
                             <div class="not-sect2-parr col-xs-12">
-                                '.$col['empresa_descripcion'].'
+                                '.$col['empresa_descripcion1'].'
                             </div>
                             <div class="not-sect2-fecha col-xs-12">
-                                '.$col['empresa_fecha'].'
+                                '.$col['empresa_link_face'].'
                             </div>
                             <div class="not-sect2-btn col-xs-12">
                                 <form action="empresaDetalle.php" method="post">
@@ -792,128 +776,46 @@ class Catalogo_web extends generalQuery
 
             foreach($result as $col);
 
-            $htmlTitulo = $col['empresa_titulo'];
-            $htmlTituloIngles = $col['empresa_titulo_ingles'];
+            $htmlOrden = $col['empresa_orden'];
+            $htmlNombre = $col['empresa_nombre'];
+            $htmlNombreIngles = $col['empresa_nombre_ingles'];
 
-            $htmlSubtitulo = $col['empresa_subtitulo'];
-            $htmlSubtituloIngles = $col['empresa_subtitulo_ingles'];
-
-            $htmlDescripcion1 = $col['empresa_descripcion'];
+            $htmlDescripcion1 = $col['empresa_descripcion1'];
             $htmlDescripcion2 = $col['empresa_descripcion2'];
             $htmlDescripcion3 = $col['empresa_descripcion3'];
 
-            $htmlDescripcionIngles1 = $col['empresa_descripcion_ingles'];
+            $htmlDescripcionIngles1 = $col['empresa_descripcion1_ingles'];
             $htmlDescripcionIngles2 = $col['empresa_descripcion2_ingles'];
             $htmlDescripcionIngles3 = $col['empresa_descripcion3_ingles'];
 
-            $htmlImg1 = 'intranet/view/app/img/empresas/'.$col['empresa_imagen'].'"';
-            $htmlImg2 = 'intranet/view/app/img/empresas/'.$col['empresa_imagen2'].'"';
-            $htmlImg3 = 'intranet/view/app/img/empresas/'.$col['empresa_imagen3'].'"';
-
-            // echo '111-->'.$col['empresa_imagen'];
-            // echo '222-->'.$col['empresa_imagen2'];
-            // echo '333-->'.$col['empresa_imagen3'];
-
-            
-            
-            $htmlImgNotNombre1 = $col['empresa_imagen'];
-            $htmlImgNotNombre2 = $col['empresa_imagen2'];
-            $htmlImgNotNombre3 = $col['empresa_imagen3'];
-
-            // echo '011-->'.$htmlImgNotNombre1;
-            // echo '222-->'.$htmlImgNotNombre2;
-            // echo '333-->'.$htmlImgNotNombre3;
+            $htmlImgEmpNombre1 = $col['empresa_imagen1'];
+            $htmlImgEmpNombre2 = $col['empresa_imagen2'];
+            $htmlImgEmpNombre3 = $col['empresa_imagen3'];
 
             $htmlFace = $col['empresa_link_face'];
-            $htmlFecha = $col['empresa_fecha'];
 
-            $htmlOrden = $col['empresa_orden'];
+            
 
             $argReturn = array(
-                $htmlTitulo
-                ,$htmlTituloIngles
-                ,$htmlSubtitulo
-                ,$htmlSubtituloIngles
+                $htmlOrden
+                ,$htmlNombre
+                ,$htmlNombreIngles
                 ,$htmlDescripcion1
-                ,$htmlDescripcion2
-                ,$htmlDescripcion3
                 ,$htmlDescripcionIngles1
+                ,$htmlDescripcion2
                 ,$htmlDescripcionIngles2
+                ,$htmlDescripcion3
                 ,$htmlDescripcionIngles3
-                ,$htmlImg1
-                ,$htmlImg2
-                ,$htmlImg3
+                ,$htmlImgEmpNombre1
+                ,$htmlImgEmpNombre2
+                ,$htmlImgEmpNombre3
                 ,$htmlFace
-                ,$htmlFecha
-                ,$htmlOrden
-                ,$htmlImgNotNombre1
-                ,$htmlImgNotNombre2
-                ,$htmlImgNotNombre3
             );
 
             return $argReturn;
 
         }
 
-        public function dosEmpresasMasRecientes($empresaActual){
-
-            $arg=array(
-
-                'tables'=>array(
-                    array('empresa','n'),
-                ),
-                /*
-                'fields'=>array(
-                    array('n.empresa_id')
-                    // ,array('min(n.empresa_orden)')
-                    ,array('n.empresa_orden')
-                ),
-                */
-                'conditional'=>array(
-                    array('','n.empresa_activo','=','1')
-                    ,array('and','n.empresa_orden','!=',$empresaActual)
-                ),
-                'order'=>array(
-                    array('order by','n.empresa_orden','ASC')
-                ),
-                'limit'=>array(
-                    array('2','0')
-                )    
-
-            );
-
-            $this->setSelectArg($arg);
-            $result = $this->selectData();
-            
-            foreach($result as $col){
-                $htmlSelect2 .= '
-
-                    <div class="notDet-sect3 col-xs-12 col-sm-6">
-                        <div class="notDet-sect3-divimg col-xs-12">
-                            <form action="empresaDetalle.php" method="post">
-                                <button style="border:none; padding:0; outline: none;" class="notDet-dosRec1" type="submit" name="empresa-id" value="'.$col['empresa_id'].'">
-                                <img class="img-responsive" src="intranet/view/app/img/empresas/'.$col['empresa_imagen'].'" alt="">
-                                </button>
-                            </form>
-                        </div>
-                        <div class="notDet-sect3-desc col-xs-12">
-                            <form action="empresaDetalle.php" method="post">
-                                <button style="border:none; padding:0; background: transparent; outline: none;" class="notDet-dosRec2" type="submit" name="empresa-id" value="'.$col['empresa_id'].'">
-                                    '.$col['empresa_titulo'].'
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                ';
-            }
-
-            if($htmlSelect2!=''){
-                return $htmlSelect2;
-            }else if($htmlSelect2 == ''){
-                return 0;
-            }
-
-        }
 
         public function totalempresas(){
             $arg=array(
@@ -967,14 +869,14 @@ class Catalogo_web extends generalQuery
 
                     <div class="not-sect2-noticia col-xs-12">
                         <div class="col-xs-12 col-sm-12 col-md-7">
-                            <img class="img-responsive" src="intranet/view/app/img/empresas/'.$col['empresa_imagen'].'" alt="">
+                            <img class="img-responsive" src="intranet/view/app/img/empresas/'.$col['empresa_imagen1'].'" alt="">
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-5">
                             <div class="not-sect2-tit col-xs-12">
-                                '.$col['empresa_titulo'].'
+                                '.$col['empresa_nombre'].'
                             </div>
                             <div class="not-sect2-parr col-xs-12">
-                                '.$col['empresa_descripcion'].'
+                                '.$col['empresa_descripcion1'].'
                             </div>
                             <div class="not-sect2-btn col-xs-12">
                                 <form action="empresaDetalle.php" method="post">

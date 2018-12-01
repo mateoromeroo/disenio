@@ -227,102 +227,177 @@
                             <div class="col-xs-12 col-sm-6">
                               <div class="section-input">
                                 <label>Orden:</label>
-                                <input required type="number" class="form-control" name="noticia_orden" value="<?= $noticia_orden; ?>">
+                                <input type="number" class="form-control" name="noticia_orden" value="<?= $noticia_orden; ?>">
                               </div>                              
                             </div>
 
                             <div class="col-xs-12 col-sm-6">
                               <div class="section-input">
                                 <label>Fecha: </label>
-                                <input required type="text" class="form-control" name="noticia_fecha" value="<?= $noticia_fecha; ?>">
+                                <input type="text" class="form-control" name="noticia_fecha" value="<?= $noticia_fecha; ?>">
                               </div>                              
                             </div>
                                                        
                             <div class="col-xs-12 col-sm-6">
                               <div class="section-input">
                                 <label>Título:</label>
-                                <input required type="text" class="form-control" name="noticia_titulo" value="<?= $noticia_titulo; ?>">
+                                <input type="text" class="form-control" name="noticia_titulo" value="<?= $noticia_titulo; ?>">
                               </div>                              
                             </div>
                             <div class="col-xs-12 col-sm-6">
                               <div class="section-input">
                                 <label>Título en inglés:</label>
-                                <input required type="text" class="form-control" name="noticia_titulo_ingles" value="<?= $noticia_titulo_ingles; ?>">
+                                <input type="text" class="form-control" name="noticia_titulo_ingles" value="<?= $noticia_titulo_ingles; ?>">
                               </div>                              
                             </div>
 
                             <div class="col-xs-12 col-sm-6">
                               <div class="section-input">
                                 <label>Subtítulo:</label>
-                                <input required type="text" class="form-control" name="noticia_subtitulo" value="<?= $noticia_subtitulo; ?>">
+                                <input type="text" class="form-control" name="noticia_subtitulo" value="<?= $noticia_subtitulo; ?>">
                               </div>                              
                             </div>
                             <div class="col-xs-12 col-sm-6">
                               <div class="section-input">
                                 <label>Subtítulo en inglés:</label>
-                                <input required type="text" class="form-control" name="noticia_subtitulo_ingles" value="<?= $noticia_subtitulo_ingles; ?>">
+                                <input type="text" class="form-control" name="noticia_subtitulo_ingles" value="<?= $noticia_subtitulo_ingles; ?>">
+                              </div>                              
+                            </div>
+
+                            <!-- <div class="col-xs-12 col-sm-6">
+                              <div class="section-input">
+                                <label>Descripción:</label>
+                                <input type="text" class="form-control" name="noticia_descripcion" value="<?= $noticia_descripcion; ?>">
+                              </div>                              
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                              <div class="section-input">
+                                <label>Descripción 1 en ingles:</label>
+                                <input type="text" class="form-control" name="noticia_descripcion_ingles" value="<?= $noticia_descripcion_ingles; ?>">
                               </div>                              
                             </div>
 
                             <div class="col-xs-12 col-sm-6">
                               <div class="section-input">
+                                <label>Descripción 2:</label>
+                                <input type="text" class="form-control" name="noticia_descripcion2" value="<?= $noticia_descripcion2; ?>">
+                              </div>                              
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                              <div class="section-input">
+                                <label>Descripción 2 en ingles:</label>
+                                <input type="text" class="form-control" name="noticia_descripcion2_ingles" value="<?= $noticia_descripcion2_ingles; ?>">
+                              </div>                              
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6">
+                              <div class="section-input">
+                                <label>Descripción 3:</label>
+                                <input type="text" class="form-control" name="noticia_descripcion3" value="<?= $noticia_descripcion3; ?>">
+                              </div>                              
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                              <div class="section-input">
+                                <label>Descripción 3 en ingles:</label>
+                                <input type="text" class="form-control" name="noticia_descripcion3_ingles" value="<?= $noticia_descripcion3_ingles; ?>">
+                              </div>                              
+                            </div> -->
+
+                            <div class="col-xs-12 col-sm-6">
+                              <div class="section-input">
                                 <label>Descripción 1:</label>
-                                <textarea required id="not-descripcion2" type="text" class="form-control prod-txta" name="noticia_descripcion2" value="<?= $noticia_descripcion2 ?>"><?= $noticia_descripcion2; ?></textarea>
+                                <textarea id="not-descripcion1" type="text" class="form-control prod-txta" name="noticia_descripcion" value="<?= $noticia_descripcion ?>"><?= $noticia_descripcion; ?></textarea>
                               </div>     
                             </div>
                             <div class="col-xs-12 col-sm-6">
                               <div class="section-input">
                                 <label>Descripción 1 en inglés:</label>
-                                <textarea required id="not-descripcion2-ingles" type="text" class="form-control prod-txta" name="noticia_descripcion2_ingles" value="<?= $noticia_descripcion2_ingles ?>"><?= $noticia_descripcion2_ingles; ?></textarea>
+                                <textarea id="not-descripcion1-ingles" type="text" class="form-control prod-txta" name="noticia_descripcion_ingles" value="<?= $noticia_descripcion_ingles ?>"><?= $noticia_descripcion_ingles; ?></textarea>
                               </div>     
                             </div>
                             <div class="col-xs-12 col-sm-6">
                               <div class="section-input">
                                 <label>Descripción 2:</label>
-                                <textarea required id="not-descripcion3" type="text" class="form-control prod-txta" name="noticia_descripcion3" value="<?= $noticia_descripcion3 ?>"><?= $noticia_descripcion3; ?></textarea>
+                                <textarea id="not-descripcion2" type="text" class="form-control prod-txta" name="noticia_descripcion2" value="<?= $noticia_descripcion2 ?>"><?= $noticia_descripcion2; ?></textarea>
                               </div>     
                             </div>
                             <div class="col-xs-12 col-sm-6">
                               <div class="section-input">
                                 <label>Descripción 2 en inglés:</label>
-                                <textarea required id="not-descripcion3-ingles" type="text" class="form-control prod-txta" name="noticia_descripcion3_ingles" value="<?= $noticia_descripcion3_ingles ?>"><?= $noticia_descripcion3_ingles; ?></textarea>
+                                <textarea id="not-descripcion2-ingles" type="text" class="form-control prod-txta" name="noticia_descripcion2_ingles" value="<?= $noticia_descripcion2_ingles ?>"><?= $noticia_descripcion2_ingles; ?></textarea>
                               </div>     
-                            </div>                         
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                              <div class="section-input">
+                                <label>Descripción 3:</label>
+                                <textarea id="not-descripcion3" type="text" class="form-control prod-txta" name="noticia_descripcion3" value="<?= $noticia_descripcion3 ?>"><?= $noticia_descripcion3; ?></textarea>
+                              </div>     
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                              <div class="section-input">
+                                <label>Descripción 3 en inglés:</label>
+                                <textarea id="not-descripcion3-ingles" type="text" class="form-control prod-txta" name="noticia_descripcion3_ingles" value="<?= $noticia_descripcion3_ingles ?>"><?= $noticia_descripcion3_ingles; ?></textarea>
+                              </div>     
+                            </div>
+
+
+
+                            <!-- <div class="col-xs-12 col-sm-6 col-md-4">
+                              <div class="section-input">
+                                <label>Imagen 1:</label>
+                                <input type="text" class="form-control" name="noticia_imagen" value="<?= $noticia_imagen; ?>">
+                              </div>                              
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                              <div class="section-input">
+                                <label>Imagen 2:</label>
+                                <input type="text" class="form-control" name="noticia_imagen2" value="<?= $noticia_imagen2; ?>">
+                              </div>                              
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                              <div class="section-input">
+                                <label>Imagen 3:</label>
+                                <input type="text" class="form-control" name="noticia_imagen3" value="<?= $noticia_imagen3; ?>">
+                              </div>                              
+                            </div> -->
 
                             <div class="col-xs-12 np">
                               <div class="col-xs-12">
                                 <div class="section-input">
                                   <label>Imagen 1:</label>
                                   <input type="file" class="form-control btn-success" name="noticia_imagen" value="<?= $noticia_imagen ?>" id="noticia-imagen-1" accept="image/*">
-                                  <small><b>Nota:</b> Medidas recomendadas 800 píxeles de ancho por 800 píxeles de alto. Peso máximo de 250KB.</small>
                                 </div>
-
                               </div>
                               <div class="col-xs-12">
                                 <div class="section-input">
                                   <label>Imagen 2:</label>
                                   <input type="file" class="form-control btn-success" name="noticia_imagen2" value="<?= $noticia_imagen2 ?>" id="noticia-imagen-2" accept="image/*">
-                                  <small><b>Nota:</b> Medidas recomendadas 800 píxeles de ancho por 800 píxeles de alto. Peso máximo de 250KB.</small>
                                 </div>
-
                               </div>
                               <div class="col-xs-12">
                                 <div class="section-input">
                                   <label>Imagen 3:</label>
                                   <input type="file" class="form-control btn-success" name="noticia_imagen3" value="<?= $noticia_imagen3 ?>" id="noticia-imagen-3" accept="image/*">
-                                  <small><b>Nota:</b> Medidas recomendadas 800 píxeles de ancho por 800 píxeles de alto. Peso máximo de 250KB.</small>
                                 </div>
-
                               </div>
 
-                              <!-- <div class="col-xs-12 col-sm-6">
-                              <div class="section-input">
+                              <div class="col-xs-12 col-sm-6">
+                              <!-- <div class="section-input">
                                 <label>Link de facebook:</label>
                                 <input type="text" class="form-control" name="noticia_link_face" value="<?= $noticia_link_face; ?>">
-                              </div>                           
-                            </div> -->
+                              </div>  -->                          
+                            </div>
 
                             </div>
+
+                            
+
+                            
+
+                            
+                            
 
 
                             <!-- hidden obj : Usa ese input oculto para enviar el id por post  -->

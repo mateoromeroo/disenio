@@ -149,6 +149,7 @@ class View extends generalQuery{
                                 $name = $table['col-'.$i]['body']['data']['name'];
                                 $text = $table['col-'.$i]['body']['data']['text'];
                                 $icon = $table['col-'.$i]['body']['data']['icon'];
+                                // $color = $table['col-'.$i]['body']['data']['color']; // color
                                 $id = $table['col-'.$i]['body']['data']['id'];
 
                                 if($element=='button'){
@@ -170,6 +171,14 @@ class View extends generalQuery{
                                     <div class="radiobutton radiobutton-info">
                                         <input id="'.$id.$row.'" type="radio" name="'.$name.'" class="'.$class.'" value="'.$row.'">
                                         <label for="'.$id.$row.'" title="">'.$text.'</label>
+                                    </div>
+                                    ';
+                                
+                                }else if($element=='div'){
+                                    // $divtdStyle = "background:".$color;
+                                    $htmlTd2 = '
+                                    <div id="'.$id.'" class="'.$class.'" style="background:'.$row.'">
+                                        
                                     </div>
                                     ';
                                 }

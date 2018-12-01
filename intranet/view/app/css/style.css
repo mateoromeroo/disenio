@@ -5,6 +5,13 @@
 
 /**** Fin de lib summernote ***/
 
+.cuadrocategoriacolor{
+    /*background: #e28323*/;
+    width: 20px;
+    display: inline-block;
+    height: 20px !important; 
+    border-radius: 2px;
+}
 
 th{
   background: #ccc !important;
@@ -815,8 +822,9 @@ footer{
 }
 
 .obj-form{
-  padding-top: 20px;
-  padding-bottom: 20px;
+  /*padding-top: 20px;
+  padding-bottom: 20px;*/
+  padding: 20px;
   width: 100%;
   float: left;
   max-height: 450px;
@@ -1221,7 +1229,8 @@ label{
 
 @media (min-width: 992px) {
   .section-usuario-form{
-    width: 40%
+    /*width: 40%*/
+    width: 40%;
   }
 
   .section-usuario-form-2{
@@ -1247,6 +1256,9 @@ label{
   .section-usuario-form{
     /*width: 35%;*/
     width: 60%;
+  }
+  .menulateral-categoria{
+    width: 35%;
   }
 
   .section-usuario-form-2{

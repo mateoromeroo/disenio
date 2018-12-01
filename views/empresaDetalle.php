@@ -14,24 +14,24 @@
 						  <!-- Wrapper for slides -->
 						  <div class="carousel-inner" role="listbox">
 
-						 <?php  if($htmlImgNotNombre1 != ''){ ?>
-						    <div class="<?= $notDetSlider1; ?> item active notDet-slider1 col-xs-12" style="background-image: url(<?= $htmlImg1; ?>);">
+						 <?php  if($htmlImgEmpNombre1 != ''){ ?>
+						    <div class="<?= $empDetSlider1; ?> item active notDet-slider1 col-xs-12" style="background-image: url('intranet/view/app/img/empresas/<?= $htmlImgEmpNombre1; ?>');">
 						    	<div class="ini-fondo-txt col-xs-12">
 			
 						    	</div>				    
 						    </div>
 						  <?php } ?>
 
-						 <?php  if($htmlImgNotNombre2 != ''){ ?>
-						    <div class="<?= $notDetSlider2; ?> item notDet-slider2 col-xs-12" style="background-image: url(<?= $htmlImg2; ?>);">
+						 <?php  if($htmlImgEmpNombre2 != ''){ ?>
+						    <div class="<?= $empDetSlider2; ?> item notDet-slider2 col-xs-12" style="background-image: url('intranet/view/app/img/empresas/<?= $htmlImgEmpNombre2; ?>');">
 						    	<div class="ini-fondo-txt col-xs-12">
 			
 						    	</div>  	
 						    </div>
 						  <?php } ?>
 
-						 <?php  if($htmlImgNotNombre3 != ''){ ?>
-						    <div class="<?= $notDetSlider3; ?> item notDet-slider3 col-xs-12" style="background-image: url(<?= $htmlImg3; ?>);">
+						 <?php  if($htmlImgEmpNombre3 != ''){ ?>
+						    <div class="<?= $empDetSlider3; ?> item notDet-slider3 col-xs-12" style="background-image: url('intranet/view/app/img/empresas/<?= $htmlImgEmpNombre3; ?>');">
 						    	<div class="ini-fondo-txt col-xs-12">
 			
 						    	</div>				      	
@@ -56,27 +56,15 @@
 					<div class="notDet-sect2-tit col-xs-12">
 						<?php 
 							if($site['lang'] == 'es'){
-								echo $htmlTitulo;
+								echo $htmlNombre;
 							}
 							if ($site['lang'] == 'en') {
-								echo $htmlTituloIngles;
+								echo $htmlNombreIngles;
 							}
 						 ?>
 						<!-- NUESTRO CULTIVO -->
 					</div>
-					<div class="notDet-sect2-desc col-xs-12">
-						<span class="notDet-sect2-bordebajo">
-							<?php 
-								if($site['lang'] == 'es'){
-									echo $htmlSubtitulo;
-								}
-								if ($site['lang'] == 'en') {
-									echo $htmlSubtituloIngles;
-								}
-							 ?>
-						</span>
-						<div class="notDet-sect2-subr col-xs-12"></div>
-					</div>
+					
 					<div class="notDet-sect2-parr1 col-xs-12">
 						<?php 
 							if($site['lang'] == 'es'){
@@ -88,6 +76,16 @@
 						?>
 					</div>
 				</div>
+			</div>
+			<div style="margin-bottom: 30px;" class="notDet-sect2-parr2 col-xs-12">
+				<?php 
+					if($site['lang'] == 'es'){
+						echo $htmlDescripcion3;
+						}
+					if ($site['lang'] == 'en') {
+						echo $htmlDescripcion3Ingles;
+					}
+				?>
 			</div>
 			<div class="empDet-sect2-parr2 col-xs-12">
 				<div class="col-xs-12 empDet-sect2-recuadro">
@@ -191,22 +189,12 @@
 			</div>
 			<div class="notDer-sect2-fecha-btn col-xs-12">
 				<div class="notDet-sect2-fb-fecha col-xs-12 col-sm-6">
-					<img src="app/img/noticiaDetalle/fb.png" alt="">
-						<span class="notDet-sect2-fecha">
-							<?php 
-								if($site['lang'] == 'es'){
-									echo $htmlFecha;
-									}
-								if ($site['lang'] == 'en') {
-									echo $htmlFechaIngles;
-								}
-							?>
-
-							<!-- 15 / 04 / 2018 -->
-						</span>
+					<a href="<?= $htmlLinkFace; ?>" target="_blank">
+						<img src="app/img/noticiaDetalle/fb.png" alt="">
+					</a>
 				</div>
 				<div class="notDet-sect2-btn col-xs-12 col-sm-6">
-					<a class="notDet-sect2-btnRegresar" href="empresas.php"><?= $lang['notDetalle']['notDet1']; ?></a>
+					<a class="notDet-sect2-btnRegresar" href="empresas.php">Regresar</a>
 				</div>
 			</div>
 		</div>
@@ -214,28 +202,6 @@
 		</div>	
 	</div>
 	
-	<div class="notDet-sect3 col-xs-12">
-		<div class="notDet-espaciosLat col-xs-12 col-md-offset-1 col-md-10">
-			<div class="notDet-sect3-masnoticias col-xs-12">
-				<!-- <?= $lang['notDetalle']['notDet2']; ?> -->
-				Más Empresas
-			</div>
-			<div class="col-xs-12" style="padding: 0;">
-
-				<?php 
-					if($site['lang'] == 'es'){
-						echo $DosNotOrdenMin;
-						}
-					if ($site['lang'] == 'en') {
-						echo $DosNotOrdenMinIngles;
-					}
-				?>
-
-			</div>
-		</div>
-		<div class="notDet-sect3-margenes col-xs-12 col-sm-offset-3 col-sm-6">
-		</div>
-	</div>
 	</div>	
 </div>
 

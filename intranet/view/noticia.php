@@ -115,7 +115,7 @@
             </div>
             <div class="col-xs-12 col-md-6 section-input-noticia">
               <label>Título:</label>
-              <input required type="text" class="form-control" name="noticia_titulo">
+              <input type="text" class="form-control" name="noticia_titulo">
             </div>
             <div class="col-xs-12 col-md-6 section-input-noticia">
               <label>Título en ingles:</label>
@@ -129,63 +129,88 @@
               <label>Subtítulo en ingles:</label>
               <input required type="text" class="form-control" name="noticia_subtitulo_ingles">
             </div>
-         
-            <!-- <div class="col-xs-12 col-sm-6">
-              <div class="section-input">
-                <label>Descripción 1:</label>
-                <textarea id="not-descripcion1" type="text" class="form-control prod-txta" name="noticia_descripcion" value="<?= $noticia_descripcion ?>"></textarea>
-              </div>     
+            <!-- <div class="col-xs-12 col-md-6 section-input-noticia">
+              <label>Descripción 1</label>
+              <input type="text" class="form-control" name="noticia_descripcion" required>
             </div>
-            <div class="col-xs-12 col-sm-6">
-              <div class="section-input">
-                <label>Descripción 1 en inglés:</label>
-                <textarea id="not-descripcion1-ingles" type="text" class="form-control prod-txta" name="noticia_descripcion_ingles" value="<?= $noticia_descripcion_ingles ?>"></textarea>
-              </div>     
+            <div class="col-xs-12 col-md-6 section-input-noticia">
+              <label>Descripción 1 en ingles</label>
+              <input type="text" class="form-control" name="noticia_descripcion_ingles" required>
+            </div>
+            <div class="col-xs-12 col-md-6 section-input-noticia">
+              <label>Descripción 2</label>
+              <input type="text" class="form-control" name="noticia_descripcion2" required>
+            </div>
+            <div class="col-xs-12 col-md-6 section-input-noticia">
+              <label>Descripción 2 en ingles</label>
+              <input type="text" class="form-control" name="noticia_descripcion2_ingles" required>
+            </div>
+            <div class="col-xs-12 col-md-6 section-input-noticia">
+              <label>Descripción 3</label>
+              <input type="text" class="form-control" name="noticia_descripcion3" required>
+            </div>
+            <div class="col-xs-12 col-md-6 section-input-noticia">
+              <label>Descripción 3 en ingles</label>
+              <input type="text" class="form-control" name="noticia_descripcion3_ingles" required>
             </div> -->
             <div class="col-xs-12 col-sm-6">
               <div class="section-input">
                 <label>Descripción 1:</label>
-                <textarea required id="not-descripcion2" type="text" class="form-control prod-txta" name="noticia_descripcion2" value="<?= $noticia_descripcion2 ?>"></textarea>
+                <textarea required id="not-descripcion1" type="text" class="form-control prod-txta" name="noticia_descripcion" value="<?= $noticia_descripcion ?>"></textarea>
               </div>     
             </div>
             <div class="col-xs-12 col-sm-6">
               <div class="section-input">
                 <label>Descripción 1 en inglés:</label>
-                <textarea required id="not-descripcion2-ingles" type="text" class="form-control prod-txta" name="noticia_descripcion2_ingles" value="<?= $noticia_descripcion2_ingles ?>"></textarea>
+                <textarea required id="not-descripcion1-ingles" type="text" class="form-control prod-txta" name="noticia_descripcion_ingles" value="<?= $noticia_descripcion_ingles ?>"></textarea>
               </div>     
             </div>
             <div class="col-xs-12 col-sm-6">
               <div class="section-input">
                 <label>Descripción 2:</label>
-                <textarea required id="not-descripcion3" type="text" class="form-control prod-txta" name="noticia_descripcion3" value="<?= $noticia_descripcion3 ?>"></textarea>
+                <textarea required id="not-descripcion2" type="text" class="form-control prod-txta" name="noticia_descripcion2" value="<?= $noticia_descripcion2 ?>"></textarea>
               </div>     
             </div>
             <div class="col-xs-12 col-sm-6">
               <div class="section-input">
                 <label>Descripción 2 en inglés:</label>
-                <textarea required id="not-descripcion3-ingles" type="text" class="form-control prod-txta" name="noticia_descripcion3_ingles" value="<?= $noticia_descripcion3_ingles ?>"></textarea>
+                <textarea required id="not-descripcion2-ingles" type="text" class="form-control prod-txta" name="noticia_descripcion2_ingles" value="<?= $noticia_descripcion2_ingles ?>" ></textarea>
+              </div>     
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <div class="section-input">
+                <label>Descripción 3:</label>
+                <textarea id="not-descripcion3" type="text" class="form-control prod-txta" name="noticia_descripcion3" value="<?= $noticia_descripcion3 ?>"></textarea>
+              </div>     
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <div class="section-input">
+                <label>Descripción 3 en inglés:</label>
+                <textarea id="not-descripcion3-ingles" type="text" class="form-control prod-txta" name="noticia_descripcion3_ingles" value="<?= $noticia_descripcion3_ingles ?>"></textarea>
               </div>     
             </div>
 
 
             <div class="col-xs-12 section-input-noticia">
                 <label>Imagen 1:</label>
-                  <input required type="file" class="form-control btn-success" name="noticia_imagen" id="producto-imagen-1" accept="image/*" value="">
+                  <input required type="file" class="form-control btn-success" name="noticia_imagen" id="noticia-imagen-1" accept="image/*" value="">
                   <small><b>Nota:</b> Medidas recomendadas 800 píxeles de ancho por 800 píxeles de alto. Peso máximo de 250KB.</small>
             </div>
+            
             <div class="col-xs-12 section-input-noticia">
                 <label>Imagen 2:</label>
-                  <input type="file" class="form-control btn-success" name="noticia_imagen2" id="producto-imagen-2" accept="image/*" value="">
+                  <input type="file" class="form-control btn-success" name="noticia_imagen2" id="noticia-imagen-2" accept="image/*" value="">
                   <small><b>Nota:</b> Medidas recomendadas 800 píxeles de ancho por 800 píxeles de alto. Peso máximo de 250KB.</small>
             </div>
+            <
             <div class="col-xs-12 section-input-noticia">
                 <label>Imagen 3:</label>
-                  <input type="file" class="form-control btn-success" name="noticia_imagen3" id="producto-imagen-3" accept="image/*" value="">
+                  <input type="file" class="form-control btn-success" name="noticia_imagen3" id="noticia-imagen-3" accept="image/*" value="">
                   <small><b>Nota:</b> Medidas recomendadas 800 píxeles de ancho por 800 píxeles de alto. Peso máximo de 250KB.</small>
             </div> 
             <!-- <div class="col-xs-12 col-md-6 section-input-noticia">
               <label>Imagen 1</label>
-              <input type="text" class="form-control" name="noticia_imagen">
+              <input type="text" class="form-control" name="noticia_imagen" required>
             </div>
             <div class="col-xs-12 col-md-6 section-input-noticia">
               <label>Imagen 2</label>
@@ -241,7 +266,6 @@
         </section>
     </footer>
 
-    
     <!-- PLUGIN PARA EFECTO PARA LA VISTA DE CARGA DE ARCHIVOS -->
     <script type="text/javascript" src="../lib/fileinput/js/plugins/piexif.js"></script>
     <script type="text/javascript" src="../lib/fileinput/js/fileinput.js"></script>
@@ -249,7 +273,6 @@
     <script type="text/javascript" src="../lib/fileinput/js/locales/es.js"></script> 
 
     <!-- PLUGIN PARA EFECTO PARA LA VISTA DE CARGA DE ARCHIVOS -->
-    <script src="app/js/app.js"></script>
-    
+     <script src="app/js/app.js"></script>
   </body>
 </html>

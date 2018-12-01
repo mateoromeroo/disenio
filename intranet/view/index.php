@@ -29,7 +29,7 @@
     <body >
 	   <div class="container" id="body-log">
             <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 main" id="side">
-                <div class="col-sm-6 left-side hidden">
+                <div class="col-sm-6 left-side">
                     <h1>Bienvenido a la intranet de su web</h1>
                     <br>
                     <p>
@@ -42,7 +42,7 @@
                         <a class="btn tw" href="<?= EMP_WEB; ?>" target="_blank">Visita nuestra web</a>
                     </div>
                 </div>
-                <div class="col-sm-offset-1 col-sm-10 right-side">
+                <div class="col-sm-6 right-side">
                     <h1>Administrador</h1>
                     <p>Ingrese sus datos de acceso</p>
                     <div class="form">
@@ -73,7 +73,7 @@
             </div>
         </div>
         <div class="bg-redirect">
-            <div class="red-logo"></div>
+            <div class="red-logo">Agencia HDC</div>
             <div class="text-center">
                 <h3>
                     <div class="load-animate-1"></div>

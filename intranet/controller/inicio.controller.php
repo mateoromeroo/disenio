@@ -45,6 +45,7 @@ $block = 'block';
         ,array('list-alt'  ,'<br>Módulo de<br> Empresas'   ,'empresa.php'    , "block")
         ,array('list-alt'  ,'<br>Módulo de<br> Quejas'   ,'quejas.php'    , "block")
         ,array('list-alt'  ,'<br>Módulo de<br> Contactenos'   ,'contactenos.php'    , "block")
+        
     );
 
     $htmlBtnHome = btn_link_home($arg_btn_home);

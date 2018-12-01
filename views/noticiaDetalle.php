@@ -15,7 +15,7 @@
 						  <div class="carousel-inner" role="listbox">
 
 						 <?php  if($htmlImgNotNombre1 != ''){ ?>
-						    <div class="<?= $notDetSlider1; ?> item active notDet-slider1 col-xs-12" style="background-image: url(<?= $htmlImg1; ?>);">
+						    <div class="<?= $notDetSlider1; ?> item active notDet-slider1 col-xs-12" style="background-image: url('intranet/view/app/img/noticias/<?=  $htmlImgNotNombre1; ?>');">
 						    	<div class="ini-fondo-txt col-xs-12">
 			
 						    	</div>				    
@@ -23,7 +23,7 @@
 						  <?php } ?>
 
 						 <?php  if($htmlImgNotNombre2 != ''){ ?>
-						    <div class="<?= $notDetSlider2; ?> item notDet-slider2 col-xs-12" style="background-image: url(<?= $htmlImg2; ?>);">
+						    <div class="<?= $notDetSlider2; ?> item notDet-slider2 col-xs-12" style="background-image: url('intranet/view/app/img/noticias/<?=  $htmlImgNotNombre2; ?>');">
 						    	<div class="ini-fondo-txt col-xs-12">
 			
 						    	</div>  	
@@ -31,7 +31,7 @@
 						  <?php } ?>
 
 						 <?php  if($htmlImgNotNombre3 != ''){ ?>
-						    <div class="<?= $notDetSlider3; ?> item notDet-slider3 col-xs-12" style="background-image: url(<?= $htmlImg3; ?>);">
+						    <div class="<?= $notDetSlider3; ?> item notDet-slider3 col-xs-12" style="background-image: url('intranet/view/app/img/noticias/<?=  $htmlImgNotNombre3; ?>');">
 						    	<div class="ini-fondo-txt col-xs-12">
 			
 						    	</div>				      	
@@ -121,7 +121,7 @@
 						</span>
 				</div>
 				<div class="notDet-sect2-btn col-xs-12 col-sm-6">
-					<a class="notDet-sect2-btnRegresar" href="inicio.php"><?= $lang['notDetalle']['notDet1']; ?></a>
+					<a class="notDet-sect2-btnRegresar" href="inicio.php">Regresar</a>
 				</div>
 			</div>
 		</div>

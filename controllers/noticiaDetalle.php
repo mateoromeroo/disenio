@@ -6,11 +6,21 @@ include 'models/web.class.php';
 include 'functions/functions.php';
 $obj = new Catalogo_web();
 
-$noticia_id = $_POST['noticia-id'];
+$noticia_id = $_GET['noticia-id'];
 
 $arg = array($noticia_id);
 
 // echo '-->'.$noticia_id;
+
+if (isset($_GET['vista'])) {
+	if ($_GET['vista'] == 'vistainicio') {
+		$vistaRegreso = "inicio.php";
+	}
+	if ($_GET['vista'] == 'vistanoticias') {
+		$vistaRegreso = "noticias.php";
+	}
+}
+
 
 $resultDetalle2 = $obj->detalleNoticia($arg);
 
@@ -28,22 +38,19 @@ $htmlDescripcionIngles1 = $resultDetalle2[7];
 $htmlDescripcionIngles2 = $resultDetalle2[8];
 $htmlDescripcionIngles3 = $resultDetalle2[9];
 
-$htmlImg1 = $resultDetalle2[10];
-$htmlImg2 = $resultDetalle2[11];
-$htmlImg3 = $resultDetalle2[12];
+$htmlFace = $resultDetalle2[10];
+$htmlFecha = $resultDetalle2[11];
 
-$htmlFace = $resultDetalle2[13];
-$htmlFecha = $resultDetalle2[14];
+$htmlOrden = $resultDetalle2[12];
 
-$htmlOrden = $resultDetalle2[15];
-
-$htmlImgNotNombre1 = $resultDetalle2[16];
-$htmlImgNotNombre2 = $resultDetalle2[17];
-$htmlImgNotNombre3 = $resultDetalle2[18];
+$htmlImgNotNombre1 = $resultDetalle2[13];
+$htmlImgNotNombre2 = $resultDetalle2[14];
+$htmlImgNotNombre3 = $resultDetalle2[15];
 
 $arg2=array(
 	$noticia_id
 );
+
 
 /***************************************************************/
 

@@ -390,6 +390,7 @@ $("#noticia-imagen-3").fileinput({
     maxFileSize:200
 });
 
+// id que se pone a los input file para que salga el diseño del plugin:
 $("#empresa-imagen-1").fileinput({
     language:'es',
     showUpload:false,
@@ -407,54 +408,6 @@ $("#empresa-imagen-2").fileinput({
 });
 
 $("#empresa-imagen-3").fileinput({
-    language:'es',
-    showUpload:false,
-    allowedFileExtensions: ["jpg", "png"],
-    maxFileCount: 1,
-    maxFileSize:200
-});
-
-$("#quejas-imagen-1").fileinput({
-    language:'es',
-    showUpload:false,
-    allowedFileExtensions: ["jpg", "png"],
-    maxFileCount: 1,
-    maxFileSize:200
-});
-
-$("#quejas-imagen-2").fileinput({
-    language:'es',
-    showUpload:false,
-    allowedFileExtensions: ["jpg", "png"],
-    maxFileCount: 1,
-    maxFileSize:200
-});
-
-$("#quejas-imagen-3").fileinput({
-    language:'es',
-    showUpload:false,
-    allowedFileExtensions: ["jpg", "png"],
-    maxFileCount: 1,
-    maxFileSize:200
-});
-
-$("#contactenos-imagen-1").fileinput({
-    language:'es',
-    showUpload:false,
-    allowedFileExtensions: ["jpg", "png"],
-    maxFileCount: 1,
-    maxFileSize:200
-});
-
-$("#contactenos-imagen-2").fileinput({
-    language:'es',
-    showUpload:false,
-    allowedFileExtensions: ["jpg", "png"],
-    maxFileCount: 1,
-    maxFileSize:200
-});
-
-$("#contactenos-imagen-3").fileinput({
     language:'es',
     showUpload:false,
     allowedFileExtensions: ["jpg", "png"],
@@ -527,6 +480,32 @@ $(document).ready(function() {
 });
 $(document).ready(function() {
   $('#not-descripcion3-ingles').summernote();
+  $('.note-toolbar-wrapper').remove(); 
+});
+
+
+$(document).ready(function() {
+  $('#emp-descripcion1').summernote();
+  $('.note-toolbar-wrapper').remove(); 
+});
+$(document).ready(function() {
+  $('#emp-descripcion1-ingles').summernote();
+  $('.note-toolbar-wrapper').remove(); 
+});
+$(document).ready(function() {
+  $('#emp-descripcion2').summernote();
+  $('.note-toolbar-wrapper').remove(); 
+});
+$(document).ready(function() {
+  $('#emp-descripcion2-ingles').summernote();
+  $('.note-toolbar-wrapper').remove(); 
+});
+$(document).ready(function() {
+  $('#emp-descripcion3').summernote();
+  $('.note-toolbar-wrapper').remove(); 
+});
+$(document).ready(function() {
+  $('#emp-descripcion3-ingles').summernote();
   $('.note-toolbar-wrapper').remove(); 
 });
 

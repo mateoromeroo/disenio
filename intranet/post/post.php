@@ -175,6 +175,207 @@ if(isset($_POST['usuario_pass_new']) && $_POST['usuario_pass_new']!=''){
 *
 */
 //Formulario
+if(isset($_POST['categoria_id'])){
+	$categoria_id = htmlspecialchars($_POST['categoria_id']);
+}
+
+if(isset($_POST['categoria_orden'])){
+	$categoria_orden = htmlspecialchars($_POST['categoria_orden']);
+}
+
+if(isset($_POST['categoria_nombre'])){
+	$categoria_nombre = htmlspecialchars($_POST['categoria_nombre']);
+}
+
+if(isset($_POST['categoria_nombre_ingles'])){
+	$categoria_nombre_ingles = htmlspecialchars($_POST['categoria_nombre_ingles']);
+}
+if(isset($_POST['categoria_color'])){
+	$categoria_color = htmlspecialchars($_POST['categoria_color']);
+}
+
+
+
+/*
+*
+* @module
+* SUBCATEGORÍA
+*
+*/
+
+
+if(isset($_POST['subcategoria_orden'])){
+	$subcategoria_orden = htmlspecialchars($_POST['subcategoria_orden']);
+}
+
+if(isset($_POST['subcategoria_nombre'])){
+	$subcategoria_nombre = htmlspecialchars($_POST['subcategoria_nombre']);
+}
+
+if(isset($_POST['categoria'])){
+	$categoria_id = htmlspecialchars($_POST['categoria']);
+}
+
+
+if(isset($_POST['categoria_filtro'])){
+	$categoria_id = htmlspecialchars($_POST['categoria_filtro']);
+}
+
+if(isset($_POST['categoria_filtro'])){
+	$data_post = 1;
+	$categoria_id = htmlspecialchars($_POST['categoria_filtro']);
+}else{
+	$data_post = 0;
+}
+
+if(isset($_POST['subcategoria_id'])){
+	$subcategoria_id = htmlspecialchars($_POST['subcategoria_id']);
+}
+
+
+
+/*
+*
+* @module
+* PRODUCTOS
+*
+*/
+
+
+if(isset($_POST['producto_id'])){
+	$producto_id = htmlspecialchars($_POST['producto_id']);
+}
+
+if(isset($_POST['producto_orden'])){
+	$producto_orden = htmlspecialchars($_POST['producto_orden']);
+}
+
+if(isset($_POST['producto_nombre'])){
+	$producto_nombre = htmlspecialchars($_POST['producto_nombre']);
+}
+
+// if(isset($_POST['producto_descripcion'])){
+// 	$producto_descripcion = htmlentities($_POST['producto_descripcion'],ENT_QUOTES);
+// }
+
+if(isset($_POST['producto_descripcion'])){
+	
+	$producto_descripcion = htmlspecialchars($_POST['producto_descripcion']);
+	$producto_descripcion = html_entity_decode($_POST['producto_descripcion'], ENT_NOQUOTES, "UTF-8");
+	
+}
+
+
+// Archivos de imagen de Productos
+
+// Para cuando no se modifica la imagen:
+if(isset($_POST['producto_imagen1_c'])){
+	$producto_imagen1_c = htmlspecialchars($_POST['producto_imagen1_c']);
+}
+
+if(isset($_POST['producto_imagen2_c'])){
+	$producto_imagen2_c = htmlspecialchars($_POST['producto_imagen2_c']);
+}
+
+if(isset($_POST['producto_imagen3_c'])){
+	$producto_imagen3_c = htmlspecialchars($_POST['producto_imagen3_c']);
+}
+
+// imagen 1
+
+$newnom_producto = date("YmdHis"); // date le signa un nombre no repetitivo
+$maxsize1_producto = 500 * 600; // 300kb -> peso de la imagen
+$newfile_img_producto = $newnom_producto.'.jpg'; // concatena
+
+if(isset($_FILES['producto_imagen']['tmp_name']) && $_FILES['producto_imagen']['tmp_name']!=''){
+	if (!empty($_FILES['producto_imagen']['name'])) {
+		if ($_FILES['producto_imagen']['size'] <= $maxsize1_producto) {
+			$productoURL = "app/img/productos/";
+			if (!move_uploaded_file($_FILES['producto_imagen']['tmp_name'], $productoURL . $newfile_img_producto));
+			@unlink("app/img/productos/".$producto_imagen1_c);
+			$producto_imagen = $newfile_img_producto;
+
+		}else{
+			//$producto_imagen = $_POST['producto_imagen1_c'];
+		}
+	}
+}else{
+	if (isset($producto_imagen1_c)) {
+		$producto_imagen = $producto_imagen1_c;
+	}
+	
+}
+
+// imagen 2 
+
+$newnom_producto2 = date("YmdHis"); // date le signa un nombre no repetitivo
+$maxsize1_producto2 = 500 * 600; // 300kb -> peso de la imagen
+$newfile_img_producto2 = $newnom_producto2.'2.jpg'; // concatena
+
+if(isset($_FILES['producto_imagen2']['tmp_name']) && $_FILES['producto_imagen2']['tmp_name']!=''){
+	if (!empty($_FILES['producto_imagen2']['name'])) {
+		if ($_FILES['producto_imagen2']['size'] <= $maxsize1_producto2) {
+			$productoURL = "app/img/productos/";
+			if (!move_uploaded_file($_FILES['producto_imagen2']['tmp_name'], $productoURL . $newfile_img_producto2));
+			@unlink("app/img/productos/".$producto_imagen2_c);
+			$producto_imagen2 = $newfile_img_producto2;
+
+		}else{
+			//$producto_imagen = $_POST['producto_imagen2_c'];
+		}
+	}
+}else{
+	if (isset($producto_imagen2_c)) {
+		$producto_imagen2 = $producto_imagen2_c;
+	}
+	
+	
+}
+
+// imagen 3 
+
+$newnom_producto3 = date("YmdHis"); // date le signa un nombre no repetitivo
+$maxsize1_producto3 = 500 * 600; // 300kb -> peso de la imagen
+$newfile_img_producto3 = $newnom_producto3.'3.jpg'; // concatena
+
+if(isset($_FILES['producto_imagen3']['tmp_name']) && $_FILES['producto_imagen3']['tmp_name']!=''){
+	if (!empty($_FILES['producto_imagen3']['name'])) {
+		if ($_FILES['producto_imagen3']['size'] <= $maxsize1_producto3) {
+			$productoURL = "app/img/productos/";
+			if (!move_uploaded_file($_FILES['producto_imagen3']['tmp_name'], $productoURL . $newfile_img_producto3));
+			@unlink("app/img/productos/".$producto_imagen3_c);
+			$producto_imagen3 = $newfile_img_producto3;
+
+		}else{
+			//$producto_imagen3 = $_POST['producto_imagen3_c'];
+		}
+	}
+}else{
+	if (isset($producto_imagen3_c)) {
+		$producto_imagen3 = $producto_imagen3_c;
+	}
+	
+}
+
+
+
+if(isset($_POST['producto_nombre_ingles'])){
+	$producto_nombre_ingles = htmlspecialchars($_POST['producto_nombre_ingles']);
+}
+
+// if(isset($_POST['producto_descripcion_ingles'])){
+// 	$producto_descripcion_ingles = htmlentities($_POST['producto_descripcion_ingles'],ENT_QUOTES);
+// }
+if(isset($_POST['producto_descripcion_ingles'])){
+	$producto_descripcion_ingles = htmlspecialchars($_POST['producto_descripcion_ingles']);
+	$producto_descripcion_ingles = html_entity_decode($_POST['producto_descripcion_ingles'], ENT_NOQUOTES, "UTF-8");
+	// $producto_descripcion_ingles = strip_tags($_POST['producto_descripcion_ingles']);
+	
+}
+
+if(isset($_POST['producto_categoria'])){
+	$categoria_id = htmlspecialchars($_POST['categoria_id']);
+}
 
 if(isset($_FILES['producto_archivo']['tmp_name']) && $_FILES['producto_archivo']['tmp_name']!=''){
     if (!empty($_FILES['producto_archivo']['name'])) {
@@ -196,20 +397,6 @@ if(isset($_FILES['producto_archivo']['tmp_name']) && $_FILES['producto_archivo']
 }
 
 
-
-/*
-//echo '<br><br><br><br> btn-op-2 --> '.$btn_op_2;
-
-echo '<br><br><br><br> btn-op-2 --> '.$btn_op_2;
-echo '<br><br> btn-op --> '.$btn_op;
-echo '<br><br> filtro --> '.$tipo_usuario_id;
-echo '<br><br> busqueda --> '.$txt_search;
-
-echo '<br><br><br><br> page --> '.$page;
-
-
-echo '<br><br><br><br> btn-id --> '.$btn_id;
-*/
 
 /*
 *
@@ -349,6 +536,7 @@ if(isset($_POST['noticia_activo'])){
 }
 if(isset($_POST['noticia_titulo_ingles'])){
 	$noticia_titulo_ingles = htmlspecialchars($_POST['noticia_titulo_ingles']);
+	$noticia_titulo_ingles = html_entity_decode($_POST['noticia_titulo_ingles']);
 }
 
 if(isset($_POST['noticia_subtitulo_ingles'])){
@@ -373,331 +561,157 @@ if(isset($_POST['noticia_fecha'])){
 }
 
 
-
-
-
-
 /*
 *
 * @module
-* QUEJAS
+* EMPRESA
 *
 */
 //Formulario
-if(isset($_POST['quejas_id'])){
-	$quejas_id = htmlspecialchars($_POST['quejas_id']);
+if(isset($_POST['empresa_id'])){
+	$empresa_id = htmlspecialchars($_POST['empresa_id']);
 }
 
-if(isset($_POST['quejas_orden'])){
-	$quejas_orden = htmlspecialchars($_POST['quejas_orden']);
+if(isset($_POST['empresa_orden'])){
+	$empresa_orden = htmlspecialchars($_POST['empresa_orden']);
 }
 
-if(isset($_POST['quejas_titulo'])){
-	$quejas_titulo = htmlspecialchars($_POST['quejas_titulo']);
+if(isset($_POST['empresa_activo'])){
+	$empresa_activo = htmlspecialchars($_POST['empresa_activo']);
 }
 
-if(isset($_POST['quejas_subtitulo'])){
-	$quejas_subtitulo = htmlspecialchars($_POST['quejas_subtitulo']);
+if(isset($_POST['empresa_nombre'])){
+	$empresa_nombre = htmlspecialchars($_POST['empresa_nombre']);
 }
-if(isset($_POST['quejas_descripcion'])){
-	$quejas_descripcion = htmlspecialchars($_POST['quejas_descripcion']);
-	$quejas_descripcion = html_entity_decode($quejas_descripcion, ENT_NOQUOTES, "UTF-8");
-}
-
-if(isset($_POST['quejas_descripcion2'])){
-	$quejas_descripcion2 = htmlspecialchars($_POST['quejas_descripcion2']);
-	$quejas_descripcion2 = html_entity_decode($quejas_descripcion2, ENT_NOQUOTES, "UTF-8");
+if(isset($_POST['empresa_nombre_ingles'])){
+	$empresa_nombre_ingles = htmlspecialchars($_POST['empresa_nombre_ingles']);
+	$empresa_nombre_ingles = html_entity_decode($_POST['empresa_nombre_ingles']);
 }
 
-if(isset($_POST['quejas_descripcion3'])){
-	$quejas_descripcion3 = htmlspecialchars($_POST['quejas_descripcion3']);
-	$quejas_descripcion3 = html_entity_decode($quejas_descripcion3, ENT_NOQUOTES, "UTF-8");
+
+if(isset($_POST['empresa_descripcion1'])){
+	$empresa_descripcion1 = htmlspecialchars($_POST['empresa_descripcion1']);
+	$empresa_descripcion1 = html_entity_decode($empresa_descripcion1, ENT_NOQUOTES, "UTF-8");
+}
+if(isset($_POST['empresa_descripcion1_ingles'])){
+	$empresa_descripcion1_ingles = htmlspecialchars($_POST['empresa_descripcion1_ingles']);
+	$empresa_descripcion1_ingles = html_entity_decode($empresa_descripcion1_ingles, ENT_NOQUOTES, "UTF-8");
+}
+
+
+if(isset($_POST['empresa_descripcion2'])){
+	$empresa_descripcion2 = htmlspecialchars($_POST['empresa_descripcion2']);
+	$empresa_descripcion2 = html_entity_decode($empresa_descripcion2, ENT_NOQUOTES, "UTF-8");
+}
+if(isset($_POST['empresa_descripcion2_ingles'])){
+	$empresa_descripcion2_ingles = htmlspecialchars($_POST['empresa_descripcion2_ingles']);
+	$empresa_descripcion2_ingles = html_entity_decode($empresa_descripcion2_ingles, ENT_NOQUOTES, "UTF-8");
+}
+
+if(isset($_POST['empresa_descripcion3'])){
+	$empresa_descripcion3 = htmlspecialchars($_POST['empresa_descripcion3']);
+	$empresa_descripcion3 = html_entity_decode($empresa_descripcion3, ENT_NOQUOTES, "UTF-8");
+}
+if(isset($_POST['empresa_descripcion3_ingles'])){
+	$empresa_descripcion3_ingles = htmlspecialchars($_POST['empresa_descripcion3_ingles']);
+	$empresa_descripcion3_ingles = html_entity_decode($empresa_descripcion3_ingles, ENT_NOQUOTES, "UTF-8");
 }
 
 // Archivos de imagen
 
 // Para cuando no se modifica la imagen:
-if(isset($_POST['quejas_imagen1_c'])){
-	$quejas_imagen1_c = htmlspecialchars($_POST['quejas_imagen1_c']);
+if(isset($_POST['empresa_imagen1_c'])){
+	$empresa_imagen1_c = htmlspecialchars($_POST['empresa_imagen1_c']);
 }
 
-if(isset($_POST['quejas_imagen2_c'])){
-	$quejas_imagen2_c = htmlspecialchars($_POST['quejas_imagen2_c']);
+if(isset($_POST['empresa_imagen2_c'])){
+	$empresa_imagen2_c = htmlspecialchars($_POST['empresa_imagen2_c']);
 }
 
-if(isset($_POST['quejas_imagen3_c'])){
-	$quejas_imagen3_c = htmlspecialchars($_POST['quejas_imagen3_c']);
+if(isset($_POST['empresa_imagen3_c'])){
+	$empresa_imagen3_c = htmlspecialchars($_POST['empresa_imagen3_c']);
 }
 
 // imagen 1
 
-$newnom_quejas = date("YmdHis"); // date le signa un nombre no repetitivo
-$maxsize1_quejas = 500 * 600; // 300kb -> peso de la imagen
-$newfile_img_quejas = $newnom_quejas.'.jpg'; // concatena
+$newnom_empresa1 = date("YmdHis"); // date le signa un nombre no repetitivo
+$maxsize1_empresa1 = 500 * 600; // 300kb -> peso de la imagen
+$newfile_img_empresa1 = $newnom_empresa1.'.jpg'; // concatena
 
 // si se modifica la imagen:
-if(isset($_FILES['quejas_imagen']['tmp_name']) && $_FILES['quejas_imagen']['tmp_name']!=''){
-	if (!empty($_FILES['quejas_imagen']['name'])) {
-		if ($_FILES['quejas_imagen']['size'] <= $maxsize1_quejas) {
-			$productoURL = "app/img/quejas/";
-			if (!move_uploaded_file($_FILES['quejas_imagen']['tmp_name'], $productoURL . $newfile_img_quejas));
-			@unlink("app/img/quejas/".$quejas_imagen1_c);
-			$quejas_imagen = $newfile_img_quejas;
+if(isset($_FILES['empresa_imagen1']['tmp_name']) && $_FILES['empresa_imagen1']['tmp_name']!=''){
+	if (!empty($_FILES['empresa_imagen1']['name'])) {
+		if ($_FILES['empresa_imagen1']['size'] <= $maxsize1_empresa1) {
+			$productoURL = "app/img/empresas/";
+			if (!move_uploaded_file($_FILES['empresa_imagen1']['tmp_name'], $productoURL . $newfile_img_empresa1));
+			@unlink("app/img/empresas/".$empresa_imagen1_c);
+			$empresa_imagen1 = $newfile_img_empresa1;
 
 		}else{
-			//$quejas_imagen = $_POST['quejas_imagen1_c'];
+			//$empresa_imagen1 = $_POST['empresa_imagen11_c'];
 		}
 	}
 }else{ // si no se modifica la imagen:
 
-	if (isset($quejas_imagen1_c)) {
-		$quejas_imagen = $quejas_imagen1_c;
+	if (isset($empresa_imagen1_c)) {
+		$empresa_imagen1 = $empresa_imagen1_c;
 	}
 	
 }
 
 // imagen 2 
 
-$newnom_quejas2 = date("YmdHis"); // date le signa un nombre no repetitivo
-$maxsize1_quejas2 = 500 * 600; // 300kb -> peso de la imagen
-$newfile_img_quejas2 = $newnom_quejas2.'2.jpg'; // concatena
+$newnom_empresa2 = date("YmdHis"); // date le signa un nombre no repetitivo
+$maxsize1_empresa2 = 500 * 600; // 300kb -> peso de la imagen
+$newfile_img_empresa2 = $newnom_empresa2.'2.jpg'; // concatena
 
-if(isset($_FILES['quejas_imagen2']['tmp_name']) && $_FILES['quejas_imagen2']['tmp_name']!=''){
-	if (!empty($_FILES['quejas_imagen2']['name'])) {
-		if ($_FILES['quejas_imagen2']['size'] <= $maxsize1_quejas2) {
-			$quejasURL = "app/img/quejas/";
-			if (!move_uploaded_file($_FILES['quejas_imagen2']['tmp_name'], $quejasURL . $newfile_img_quejas2));
-			@unlink("app/img/quejas/".$quejas_imagen2_c);
-			$quejas_imagen2 = $newfile_img_quejas2;
+if(isset($_FILES['empresa_imagen2']['tmp_name']) && $_FILES['empresa_imagen2']['tmp_name']!=''){
+	if (!empty($_FILES['empresa_imagen2']['name'])) {
+		if ($_FILES['empresa_imagen2']['size'] <= $maxsize1_empresa2) {
+			$empresaURL = "app/img/empresas/";
+			if (!move_uploaded_file($_FILES['empresa_imagen2']['tmp_name'], $empresaURL . $newfile_img_empresa2));
+			@unlink("app/img/empresas/".$empresa_imagen2_c);
+			$empresa_imagen2 = $newfile_img_empresa2;
 
 		}else{
-			//$quejas_imagen = $_POST['quejas_imagen2_c'];
+			//$empresa_imagen = $_POST['empresa_imagen2_c'];
 		}
 	}
 }else{
-	if (isset($quejas_imagen2_c)) {
-		$quejas_imagen2 = $quejas_imagen2_c;
+	if (isset($empresa_imagen2_c)) {
+		$empresa_imagen2 = $empresa_imagen2_c;
 	}
 	
 }
 
 // imagen 3 
 
-$newnom_quejas3 = date("YmdHis"); // date le signa un nombre no repetitivo
-$maxsize1_quejas3 = 500 * 600; // 300kb -> peso de la imagen
-$newfile_img_quejas3 = $newnom_quejas3.'3.jpg'; // concatena
+$newnom_empresa3 = date("YmdHis"); // date le signa un nombre no repetitivo
+$maxsize1_empresa3 = 500 * 600; // 300kb -> peso de la imagen
+$newfile_img_empresa3 = $newnom_empresa3.'3.jpg'; // concatena
 
-if(isset($_FILES['quejas_imagen3']['tmp_name']) && $_FILES['quejas_imagen3']['tmp_name']!=''){
-	if (!empty($_FILES['quejas_imagen3']['name'])) {
-		if ($_FILES['quejas_imagen3']['size'] <= $maxsize1_quejas3) {
-			$quejasURL = "app/img/quejas/";
-			if (!move_uploaded_file($_FILES['quejas_imagen3']['tmp_name'], $quejasURL . $newfile_img_quejas3));
-			@unlink("app/img/quejas/".$quejas_imagen3_c);
-			$quejas_imagen3 = $newfile_img_quejas3;
+if(isset($_FILES['empresa_imagen3']['tmp_name']) && $_FILES['empresa_imagen3']['tmp_name']!=''){
+	if (!empty($_FILES['empresa_imagen3']['name'])) {
+		if ($_FILES['empresa_imagen3']['size'] <= $maxsize1_empresa3) {
+			$empresaURL = "app/img/empresas/";
+			if (!move_uploaded_file($_FILES['empresa_imagen3']['tmp_name'], $empresaURL . $newfile_img_empresa3));
+			@unlink("app/img/empresas/".$empresa_imagen3_c);
+			$empresa_imagen3 = $newfile_img_empresa3;
 
 		}else{
-			//$quejas_imagen3 = $_POST['quejas_imagen3_c'];
+			//$empresa_imagen3 = $_POST['empresa_imagen3_c'];
 		}
 	}
 }else{
-	if (isset($quejas_imagen3_c)) {
-		$quejas_imagen3 = $quejas_imagen3_c;
+	if (isset($empresa_imagen3_c)) {
+		$empresa_imagen3 = $empresa_imagen3_c;
 	}
 	
 }
 
-if(isset($_POST['quejas_link_face'])){
-	$quejas_link_face = htmlspecialchars($_POST['quejas_link_face']);
+if(isset($_POST['empresa_link_face'])){
+	$empresa_link_face = htmlspecialchars($_POST['empresa_link_face']);
 }
 
-if(isset($_POST['quejas_activo'])){
-	$quejas_activo = htmlspecialchars($_POST['quejas_activo']);
-}
-if(isset($_POST['quejas_titulo_ingles'])){
-	$quejas_titulo_ingles = htmlspecialchars($_POST['quejas_titulo_ingles']);
-}
-
-if(isset($_POST['quejas_subtitulo_ingles'])){
-	$quejas_subtitulo_ingles = htmlspecialchars($_POST['quejas_subtitulo_ingles']);
-}
-
-if(isset($_POST['quejas_descripcion_ingles'])){
-	$quejas_descripcion_ingles = htmlspecialchars($_POST['quejas_descripcion_ingles']);
-	$quejas_descripcion_ingles = html_entity_decode($quejas_descripcion_ingles, ENT_NOQUOTES, "UTF-8");
-}
-
-if(isset($_POST['quejas_descripcion2_ingles'])){
-	$quejas_descripcion2_ingles = htmlspecialchars($_POST['quejas_descripcion2_ingles']);
-	$quejas_descripcion2_ingles = html_entity_decode($quejas_descripcion2_ingles, ENT_NOQUOTES, "UTF-8");
-}
-if(isset($_POST['quejas_descripcion3_ingles'])){
-	$quejas_descripcion3_ingles = htmlspecialchars($_POST['quejas_descripcion3_ingles']);
-	$quejas_descripcion3_ingles = html_entity_decode($quejas_descripcion3_ingles, ENT_NOQUOTES, "UTF-8");
-}
-if(isset($_POST['quejas_fecha'])){
-	$quejas_fecha = htmlspecialchars($_POST['quejas_fecha']);
-}
-
-
-/*
-*
-* @module
-* CONTÁCTANOS
-*
-*/
-//Formulario
-if(isset($_POST['contactenos_id'])){
-	$contactenos_id = htmlspecialchars($_POST['contactenos_id']);
-}
-
-if(isset($_POST['contactenos_orden'])){
-	$contactenos_orden = htmlspecialchars($_POST['contactenos_orden']);
-}
-
-if(isset($_POST['contactenos_titulo'])){
-	$contactenos_titulo = htmlspecialchars($_POST['contactenos_titulo']);
-}
-
-if(isset($_POST['contactenos_subtitulo'])){
-	$contactenos_subtitulo = htmlspecialchars($_POST['contactenos_subtitulo']);
-}
-if(isset($_POST['contactenos_descripcion'])){
-	$contactenos_descripcion = htmlspecialchars($_POST['contactenos_descripcion']);
-	$contactenos_descripcion = html_entity_decode($contactenos_descripcion, ENT_NOQUOTES, "UTF-8");
-}
-
-if(isset($_POST['contactenos_descripcion2'])){
-	$contactenos_descripcion2 = htmlspecialchars($_POST['contactenos_descripcion2']);
-	$contactenos_descripcion2 = html_entity_decode($contactenos_descripcion2, ENT_NOQUOTES, "UTF-8");
-}
-
-if(isset($_POST['contactenos_descripcion3'])){
-	$contactenos_descripcion3 = htmlspecialchars($_POST['contactenos_descripcion3']);
-	$contactenos_descripcion3 = html_entity_decode($contactenos_descripcion3, ENT_NOQUOTES, "UTF-8");
-}
-
-// Archivos de imagen
-
-// Para cuando no se modifica la imagen:
-if(isset($_POST['contactenos_imagen1_c'])){
-	$contactenos_imagen1_c = htmlspecialchars($_POST['contactenos_imagen1_c']);
-}
-
-if(isset($_POST['contactenos_imagen2_c'])){
-	$contactenos_imagen2_c = htmlspecialchars($_POST['contactenos_imagen2_c']);
-}
-
-if(isset($_POST['contactenos_imagen3_c'])){
-	$contactenos_imagen3_c = htmlspecialchars($_POST['contactenos_imagen3_c']);
-}
-
-// imagen 1
-
-$newnom_contactenos = date("YmdHis"); // date le signa un nombre no repetitivo
-$maxsize1_contactenos = 500 * 600; // 300kb -> peso de la imagen
-$newfile_img_contactenos = $newnom_contactenos.'.jpg'; // concatena
-
-// si se modifica la imagen:
-if(isset($_FILES['contactenos_imagen']['tmp_name']) && $_FILES['contactenos_imagen']['tmp_name']!=''){
-	if (!empty($_FILES['contactenos_imagen']['name'])) {
-		if ($_FILES['contactenos_imagen']['size'] <= $maxsize1_contactenos) {
-			$productoURL = "app/img/contactenos/";
-			if (!move_uploaded_file($_FILES['contactenos_imagen']['tmp_name'], $productoURL . $newfile_img_contactenos));
-			@unlink("app/img/contactenos/".$contactenos_imagen1_c);
-			$contactenos_imagen = $newfile_img_contactenos;
-
-		}else{
-			//$contactenos_imagen = $_POST['contactenos_imagen1_c'];
-		}
-	}
-}else{ // si no se modifica la imagen:
-
-	if (isset($contactenos_imagen1_c)) {
-		$contactenos_imagen = $contactenos_imagen1_c;
-	}
-	
-}
-
-// imagen 2 
-
-$newnom_contactenos2 = date("YmdHis"); // date le signa un nombre no repetitivo
-$maxsize1_contactenos2 = 500 * 600; // 300kb -> peso de la imagen
-$newfile_img_contactenos2 = $newnom_contactenos2.'2.jpg'; // concatena
-
-if(isset($_FILES['contactenos_imagen2']['tmp_name']) && $_FILES['contactenos_imagen2']['tmp_name']!=''){
-	if (!empty($_FILES['contactenos_imagen2']['name'])) {
-		if ($_FILES['contactenos_imagen2']['size'] <= $maxsize1_contactenos2) {
-			$contactenosURL = "app/img/contactenos/";
-			if (!move_uploaded_file($_FILES['contactenos_imagen2']['tmp_name'], $contactenosURL . $newfile_img_contactenos2));
-			@unlink("app/img/contactenos/".$contactenos_imagen2_c);
-			$contactenos_imagen2 = $newfile_img_contactenos2;
-
-		}else{
-			//$contactenos_imagen = $_POST['contactenos_imagen2_c'];
-		}
-	}
-}else{
-	if (isset($contactenos_imagen2_c)) {
-		$contactenos_imagen2 = $contactenos_imagen2_c;
-	}
-	
-}
-
-// imagen 3 
-
-$newnom_contactenos3 = date("YmdHis"); // date le signa un nombre no repetitivo
-$maxsize1_contactenos3 = 500 * 600; // 300kb -> peso de la imagen
-$newfile_img_contactenos3 = $newnom_contactenos3.'3.jpg'; // concatena
-
-if(isset($_FILES['contactenos_imagen3']['tmp_name']) && $_FILES['contactenos_imagen3']['tmp_name']!=''){
-	if (!empty($_FILES['contactenos_imagen3']['name'])) {
-		if ($_FILES['contactenos_imagen3']['size'] <= $maxsize1_contactenos3) {
-			$contactenosURL = "app/img/contactenos/";
-			if (!move_uploaded_file($_FILES['contactenos_imagen3']['tmp_name'], $contactenosURL . $newfile_img_contactenos3));
-			@unlink("app/img/contactenos/".$contactenos_imagen3_c);
-			$contactenos_imagen3 = $newfile_img_contactenos3;
-
-		}else{
-			//$contactenos_imagen3 = $_POST['contactenos_imagen3_c'];
-		}
-	}
-}else{
-	if (isset($contactenos_imagen3_c)) {
-		$contactenos_imagen3 = $contactenos_imagen3_c;
-	}
-	
-}
-
-if(isset($_POST['contactenos_link_face'])){
-	$contactenos_link_face = htmlspecialchars($_POST['contactenos_link_face']);
-}
-
-if(isset($_POST['contactenos_activo'])){
-	$contactenos_activo = htmlspecialchars($_POST['contactenos_activo']);
-}
-if(isset($_POST['contactenos_titulo_ingles'])){
-	$contactenos_titulo_ingles = htmlspecialchars($_POST['contactenos_titulo_ingles']);
-}
-
-if(isset($_POST['contactenos_subtitulo_ingles'])){
-	$contactenos_subtitulo_ingles = htmlspecialchars($_POST['contactenos_subtitulo_ingles']);
-}
-
-if(isset($_POST['contactenos_descripcion_ingles'])){
-	$contactenos_descripcion_ingles = htmlspecialchars($_POST['contactenos_descripcion_ingles']);
-	$contactenos_descripcion_ingles = html_entity_decode($contactenos_descripcion_ingles, ENT_NOQUOTES, "UTF-8");
-}
-
-if(isset($_POST['contactenos_descripcion2_ingles'])){
-	$contactenos_descripcion2_ingles = htmlspecialchars($_POST['contactenos_descripcion2_ingles']);
-	$contactenos_descripcion2_ingles = html_entity_decode($contactenos_descripcion2_ingles, ENT_NOQUOTES, "UTF-8");
-}
-if(isset($_POST['contactenos_descripcion3_ingles'])){
-	$contactenos_descripcion3_ingles = htmlspecialchars($_POST['contactenos_descripcion3_ingles']);
-	$contactenos_descripcion3_ingles = html_entity_decode($contactenos_descripcion3_ingles, ENT_NOQUOTES, "UTF-8");
-}
-if(isset($_POST['contactenos_fecha'])){
-	$contactenos_fecha = htmlspecialchars($_POST['contactenos_fecha']);
-}
 
 ?>

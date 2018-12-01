@@ -1,7 +1,7 @@
 <?php 
 
 switch(URL){
-  case 'categoria.php':
+case 'categoria.php':
     $idBtnAdd = 'callFormRight';
     $filenameBtnAdd = 'categoria-form.php';
   break;

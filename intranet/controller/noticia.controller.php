@@ -38,10 +38,14 @@ $msg = '';
 ##########################  MENU  ######################################
 
     $arg_btn_home = array(
+        //array('icono','titulo','link','hidden/block')
+        //  array('th-large'  ,'<br>Módulo de<br> Categorías'   ,'categoria.php'    , "block")
+        // ,array('th'  ,'<br>Módulo de<br> Productos'    ,'producto.php'    , "block")
         array('list-alt'  ,'<br>Módulo de<br> Noticias'   ,'noticia.php'    , "block")
         ,array('list-alt'  ,'<br>Módulo de<br> Empresas'   ,'empresa.php'    , "block")
         ,array('list-alt'  ,'<br>Módulo de<br> Quejas'   ,'quejas.php'    , "block")
         ,array('list-alt'  ,'<br>Módulo de<br> Contactenos'   ,'contactenos.php'    , "block")
+        
     );
 
     $htmlBtnHome = btn_link_home($arg_btn_home);
