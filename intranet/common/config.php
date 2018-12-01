@@ -1,5 +1,5 @@
 <?php 
-
+//
 // DATOS DE CONEXIÓN A BD
 define('HOST', 'us-cdbr-iron-east-01.cleardb.net');
 define('DATA_BASE', 'heroku_44f5b98f341b91a');
