@@ -34,7 +34,7 @@ class Catalogo_web extends generalQuery
                         <form action="noticiaDetalle.php" method="post">
                             <button style="border: none; padding: 0; outline: none;" type="submit" name="noticia-id" class="btn-prod" value="'.$col['noticia_id'].'">
                                 <div class="pro-sect2-img col-xs-12">
-                                    <img id="prod1" class="img-responsive" src="sis/view/app/img/noticias/'.$col['noticia_imagen'].'" alt="">
+                                    <img id="prod1" class="img-responsive" src="intranet/view/app/img/noticias/'.$col['noticia_imagen'].'" alt="">
                                     <div class="img-producto text-center">
                                         <img class="hidden-xs hidden-sm img-detalle" src="app/img/productos/icon.png" alt="">
                                     </div>
@@ -92,7 +92,7 @@ class Catalogo_web extends generalQuery
                     <div class="pro-sect2-cuadro pro-sect2-cuadro1 col-xs-12 col-sm-6">
                         <button style="border: none; padding: 0;" type="submit" formaction="productoDetalle.php" name="producto-id" class="btn-prod" value="'.$col['producto_id'].'">
                             <div class="pro-sect2-img col-xs-12">
-                                <img id="prod1" class="img-responsive" src="sis/view/app/img/productos/'.$col['producto_imagen'].'" alt="">
+                                <img id="prod1" class="img-responsive" src="intranet/view/app/img/productos/'.$col['producto_imagen'].'" alt="">
                                 <div class="img-producto text-center">
                                     <img class="hidden-xs hidden-sm img-detalle" src="app/img/productos/icon.png" alt="">
                                 </div>
@@ -156,9 +156,9 @@ class Catalogo_web extends generalQuery
             $htmlDescripcionIngles2 = $col['noticia_descripcion2_ingles'];
             $htmlDescripcionIngles3 = $col['noticia_descripcion3_ingles'];
 
-            $htmlImg1 = 'sis/view/app/img/noticias/'.$col['noticia_imagen'].'"';
-            $htmlImg2 = 'sis/view/app/img/noticias/'.$col['noticia_imagen2'].'"';
-            $htmlImg3 = 'sis/view/app/img/noticias/'.$col['noticia_imagen3'].'"';
+            $htmlImg1 = 'intranet/view/app/img/noticias/'.$col['noticia_imagen'].'"';
+            $htmlImg2 = 'intranet/view/app/img/noticias/'.$col['noticia_imagen2'].'"';
+            $htmlImg3 = 'intranet/view/app/img/noticias/'.$col['noticia_imagen3'].'"';
 
             // echo '111-->'.$col['noticia_imagen'];
             // echo '222-->'.$col['noticia_imagen2'];
@@ -242,7 +242,7 @@ class Catalogo_web extends generalQuery
                         <div class="notDet-sect3-divimg col-xs-12">
                             <form action="noticiaDetalle.php" method="post">
                                 <button style="border:none; padding:0; outline: none;" class="notDet-dosRec1" type="submit" name="noticia-id" value="'.$col['noticia_id'].'">
-                                <img class="img-responsive" src="sis/view/app/img/noticias/'.$col['noticia_imagen'].'" alt="">
+                                <img class="img-responsive" src="intranet/view/app/img/noticias/'.$col['noticia_imagen'].'" alt="">
                                 </button>
                             </form>
                         </div>
@@ -324,7 +324,7 @@ class Catalogo_web extends generalQuery
                     <div class="pro-sect2-cuadro pro-sect2-cuadro1 col-xs-12 col-sm-6">
                         <button style="border: none; padding: 0;" type="submit" formaction="productoDetalle.php" name="producto-id" class="btn-prod" value="'.$col['producto_id'].'">
                             <div class="pro-sect2-img col-xs-12">
-                                <img id="prod1" class="img-responsive" src="sis/view/app/img/productos/'.$col['producto_imagen'].'" alt="">
+                                <img id="prod1" class="img-responsive" src="intranet/view/app/img/productos/'.$col['producto_imagen'].'" alt="">
                                 <div class="img-producto text-center">
                                     <img class="hidden-xs hidden-sm img-detalle" src="app/img/productos/icon.png" alt="">
                                 </div>
@@ -388,9 +388,9 @@ class Catalogo_web extends generalQuery
             $htmlDescripcionIngles2 = $col['quejas_descripcion2_ingles'];
             $htmlDescripcionIngles3 = $col['quejas_descripcion3_ingles'];
 
-            $htmlImg1 = 'sis/view/app/img/quejas/'.$col['quejas_imagen'].'"';
-            $htmlImg2 = 'sis/view/app/img/quejas/'.$col['quejas_imagen2'].'"';
-            $htmlImg3 = 'sis/view/app/img/quejas/'.$col['quejas_imagen3'].'"';
+            $htmlImg1 = 'intranet/view/app/img/quejas/'.$col['quejas_imagen'].'"';
+            $htmlImg2 = 'intranet/view/app/img/quejas/'.$col['quejas_imagen2'].'"';
+            $htmlImg3 = 'intranet/view/app/img/quejas/'.$col['quejas_imagen3'].'"';
 
             // echo '111-->'.$col['quejas_imagen'];
             // echo '222-->'.$col['quejas_imagen2'];
@@ -474,7 +474,7 @@ class Catalogo_web extends generalQuery
                         <div class="notDet-sect3-divimg col-xs-12">
                             <form action="quejasDetalle.php" method="post">
                                 <button style="border:none; padding:0; outline: none;" class="notDet-dosRec1" type="submit" name="quejas-id" value="'.$col['quejas_id'].'">
-                                <img class="img-responsive" src="sis/view/app/img/quejas/'.$col['quejas_imagen'].'" alt="">
+                                <img class="img-responsive" src="intranet/view/app/img/quejas/'.$col['quejas_imagen'].'" alt="">
                                 </button>
                             </form>
                         </div>
@@ -525,7 +525,7 @@ class Catalogo_web extends generalQuery
                         <form action="quejasDetalle.php" method="post">
                             <button style="border: none; padding: 0; outline: none;" type="submit" name="quejas-id" class="btn-prod" value="'.$col['quejas_id'].'">
                                 <div class="pro-sect2-img col-xs-12">
-                                    <img id="prod1" class="img-responsive" src="sis/view/app/img/quejas/'.$col['quejas_imagen'].'" alt="">
+                                    <img id="prod1" class="img-responsive" src="intranet/view/app/img/quejas/'.$col['quejas_imagen'].'" alt="">
                                     <div class="img-producto text-center">
                                         <img class="hidden-xs hidden-sm img-detalle" src="app/img/productos/icon.png" alt="">
                                     </div>
@@ -669,9 +669,9 @@ class Catalogo_web extends generalQuery
             $htmlDescripcionIngles2 = $col['quejas_descripcion2_ingles'];
             $htmlDescripcionIngles3 = $col['quejas_descripcion3_ingles'];
 
-            $htmlImg1 = 'sis/view/app/img/quejass/'.$col['quejas_imagen'].'"';
-            $htmlImg2 = 'sis/view/app/img/quejass/'.$col['quejas_imagen2'].'"';
-            $htmlImg3 = 'sis/view/app/img/quejass/'.$col['quejas_imagen3'].'"';
+            $htmlImg1 = 'intranet/view/app/img/quejass/'.$col['quejas_imagen'].'"';
+            $htmlImg2 = 'intranet/view/app/img/quejass/'.$col['quejas_imagen2'].'"';
+            $htmlImg3 = 'intranet/view/app/img/quejass/'.$col['quejas_imagen3'].'"';
          
             $htmlImgNotNombre1 = $col['quejas_imagen'];
             $htmlImgNotNombre2 = $col['quejas_imagen2'];
@@ -739,7 +739,7 @@ class Catalogo_web extends generalQuery
 
                     <div class="not-sect2-quejas col-xs-12">
                         <div class="col-xs-12 col-sm-12 col-md-7">
-                            <img class="img-responsive" src="sis/view/app/img/empresas/'.$col['empresa_imagen'].'" alt="">
+                            <img class="img-responsive" src="intranet/view/app/img/empresas/'.$col['empresa_imagen'].'" alt="">
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-5">
                             <div class="not-sect2-tit col-xs-12">
@@ -806,9 +806,9 @@ class Catalogo_web extends generalQuery
             $htmlDescripcionIngles2 = $col['empresa_descripcion2_ingles'];
             $htmlDescripcionIngles3 = $col['empresa_descripcion3_ingles'];
 
-            $htmlImg1 = 'sis/view/app/img/empresas/'.$col['empresa_imagen'].'"';
-            $htmlImg2 = 'sis/view/app/img/empresas/'.$col['empresa_imagen2'].'"';
-            $htmlImg3 = 'sis/view/app/img/empresas/'.$col['empresa_imagen3'].'"';
+            $htmlImg1 = 'intranet/view/app/img/empresas/'.$col['empresa_imagen'].'"';
+            $htmlImg2 = 'intranet/view/app/img/empresas/'.$col['empresa_imagen2'].'"';
+            $htmlImg3 = 'intranet/view/app/img/empresas/'.$col['empresa_imagen3'].'"';
 
             // echo '111-->'.$col['empresa_imagen'];
             // echo '222-->'.$col['empresa_imagen2'];
@@ -892,7 +892,7 @@ class Catalogo_web extends generalQuery
                         <div class="notDet-sect3-divimg col-xs-12">
                             <form action="empresaDetalle.php" method="post">
                                 <button style="border:none; padding:0; outline: none;" class="notDet-dosRec1" type="submit" name="empresa-id" value="'.$col['empresa_id'].'">
-                                <img class="img-responsive" src="sis/view/app/img/empresas/'.$col['empresa_imagen'].'" alt="">
+                                <img class="img-responsive" src="intranet/view/app/img/empresas/'.$col['empresa_imagen'].'" alt="">
                                 </button>
                             </form>
                         </div>
@@ -967,7 +967,7 @@ class Catalogo_web extends generalQuery
 
                     <div class="not-sect2-noticia col-xs-12">
                         <div class="col-xs-12 col-sm-12 col-md-7">
-                            <img class="img-responsive" src="sis/view/app/img/empresas/'.$col['empresa_imagen'].'" alt="">
+                            <img class="img-responsive" src="intranet/view/app/img/empresas/'.$col['empresa_imagen'].'" alt="">
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-5">
                             <div class="not-sect2-tit col-xs-12">
