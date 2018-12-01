@@ -1,13 +1,13 @@
 <?php 
 
 // DATOS DE CONEXIÓN A BD
-define('HOST', 'localhost');
-// define('DATA_BASE', 'hdc_kuyay_bd');
-// define('USER_DB', 'hdc_kuyay_user');
-// define('PASS_DB', 'Kuyay2018&%');
-define('DATA_BASE', 'tutransporte_bd');
-define('USER_DB', 'root');
-define('PASS_DB', '');
+define('HOST', 'us-cdbr-iron-east-01.cleardb.net');
+// define('DATA_BASE', 'tutransporte_bd');
+// define('USER_DB', 'root');
+// define('PASS_DB', '');
+define('DATA_BASE', 'heroku_44f5b98f341b91a');
+define('USER_DB', 'bc001144c9129b');
+define('PASS_DB', '14e28433');
 // fin
 
 // DATOS GENERALES
