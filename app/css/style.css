@@ -1009,12 +1009,6 @@ footer{
 
 }
 .nos-fondo{
-	background-image: url(../img/nosotros/trama22.png);
-    /*height: 240px;*/
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    /*padding: 35px 0px 55px 0px;*/
     color: white;
     display: inline-block;
     background-attachment: fixed;
