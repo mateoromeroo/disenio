@@ -1543,7 +1543,7 @@ textarea.form-control{
 }
 
 .not-sect2-tit{
-	font-size: 30px;
+	font-size: 18px;
 	font-weight: bold;
 	margin-bottom: 10px;
 	margin-top: 10px;
@@ -2242,6 +2242,10 @@ th, td {
 }/* Fin 375*/
 
 @media (min-width: 425px){
+	.not-sect2-tit{
+		font-size: 20px;
+	}	
+	
 	.video-yt{
 		width: 288px;
 		height: 162px;
@@ -2483,6 +2487,10 @@ th, td {
 
 
 @media (min-width: 768px) {
+	
+	.not-sect2-tit{
+		font-size: 21px;
+	}
 
 	/*** RUTAS***/
 
@@ -3551,9 +3559,7 @@ textarea.form-control{
 	    background-image: url(../img/contactenos/formulario.jpg);
 	}
 	.cont-sect2-txt{
-
-		
-		font-size: 38px;
+		font-size: 20px;
 	}
 	.cont-sect2{
 	    height: 180px;
@@ -3875,9 +3881,9 @@ textarea.form-control{
 	}
 
 	.not-sect2-tit{
-		font-size: 32px;
-    	font-weight: bold;
-    	margin-bottom: 8px;
+		font-size: 25px;
+		font-weight: bold;
+		margin-bottom: 8px;
 	}
 	.not-sect2-parr{
 		font-size: 17px;
