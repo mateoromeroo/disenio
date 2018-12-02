@@ -1,5 +1,5 @@
 <?php 
-
+//
 require_once 'intranet/common/config.php';
 require_once 'intranet/models/general.class.php';
 include 'models/web.class.php';

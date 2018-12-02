@@ -1,6 +1,6 @@
 <div class="noticiaDetalle col-xs-12">
 	<div class="notDet-sect1 not-sect1 col-xs-12">
-			
+		
 	</div>
 	<div class="nos-fondo col-xs-12">
 	<div class="notDet-sect2 col-xs-12">
