@@ -14,7 +14,7 @@
 		<div class="notDet-espaciosLat col-xs-12 col-sm-offset-1 col-sm-10">
 
 			<div class="not-sect2-noticias col-xs-12">
-				<?= $lang['noticias']['not1']; ?>
+				<?= $lang['empresas']['emp1']; ?>
 			</div>
 
 			<?php 

@@ -63,6 +63,63 @@ class Catalogo_web extends generalQuery
             }
         }
 
+        public function noticiasXpaginaIngles($inicio,$cantidad){
+            $arg=array(
+
+                'tables'=>array(
+                    array('noticia','n'),
+                ),
+                'conditional'=>array(
+                    array('','n.noticia_activo','=','1')
+                ),
+                'order'=>array(
+                    array('order by','n.noticia_orden','ASC')
+                ),
+                'limit'=>array(
+                    array($cantidad,$inicio)
+                )    
+
+            );
+
+            $this->setSelectArg($arg);
+            $result = $this->selectData();
+            
+            foreach($result as $col){
+                $htmlSelect3 .= '
+
+                    <div class="noticias-alto pro-sect2-cuadro pro-sect2-cuadro1 col-xs-12 col-sm-6 col-md-4">
+                        <form action="noticiaDetalle.php" method="get">
+                            <button style="border: none; padding: 0; outline: none;" type="submit" name="noticia-id" class="btn-prod" value="'.$col['noticia_id'].'">
+                                <div class="pro-sect2-img col-xs-12">
+                                    <img id="prod1" class="img-responsive" src="intranet/view/app/img/noticias/'.$col['noticia_imagen'].'" alt="">
+                                    <div class="img-producto text-center">
+                                        <img class="hidden-xs hidden-sm img-detalle" src="app/img/productos/icon.png" alt="">
+                                    </div>
+
+                                </div>
+                                
+                                <div class="pro-sect2-nombre col-xs-12 col-xs-12">
+                                    <div class="pro-sect2-titulo col-xs-12 col-xs-12">
+                                        '.$col['noticia_titulo_ingles'].'
+                                    </div>
+                                    <div class="pro-sect2-subtitulo col-xs-12 col-xs-12">
+                                        '.$col['noticia_subtitulo_ingles'].'
+                                    </div>
+                                </div>
+                                
+                            </button>
+                        </form>
+                    </div>
+                ';
+            }
+
+            if($htmlSelect3!=''){
+                return $htmlSelect3;
+            }else if($htmlSelect3 == ''){
+                return 0;
+            }
+        }
+
 
         public function listaNoticias($noticia_id)
         {

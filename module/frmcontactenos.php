@@ -55,7 +55,7 @@
 		</body>
 		<html>
 	");
-	$mail->AddCC("jvega.hdc@gmail.com","jvega.hdc@gmail.com");
+	$mail->AddCC("23mateoromero@gmail.com","23mateoromero@gmail.com");
 	$mail->IsHTML(true);
 	if(!$mail->Send()) { $rpta = $contact['msgok']; } else { $rpta = $contact['msgerror']; }
 	echo $rpta; exit(1);

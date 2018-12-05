@@ -5,25 +5,8 @@ $lang = array(
 
     "inicio" => array(
         "slider" => "",
-        "ini1" => "",
-        "ini2" => "",
-        "ini3" => "",
-        "ini4" => "",
-        "ini5" => "",
-        "ini6" => "",
-        "ini7" => "",
-        "ini8" => "",
-        "ini9" => "",
-        "ini10" => "",
-        "ini11" => "",
-        "ini12" => "",
-        "ini13" => "",
-        "ini14" => "",
-        "ini15" => "",
-        "ini16" => "",
-        "ini17" => "",
-        "ini18" => "",     
-
+        "ini1" => "News",
+        "ini2" => ""  
     ),
 
     "noticias" => array(
@@ -42,8 +25,8 @@ $lang = array(
     ),
 
     "pie" => array(
-        "pie1" => "Kuyay 2018 Todos lo derechos reservados",
-        "pie2" => "Desarrollado por HDC",
+        "pie1" => "",
+        "pie2" => "",
     ),
 )
     

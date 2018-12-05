@@ -57,6 +57,8 @@ $obj = new Catalogo_web();
 
 	$noticiasPorPagina = $obj->noticiasXpagina($inicio,$postPorPagina);
 
+	$noticiasPorPagina_ingles = $obj->noticiasXpaginaIngles($inicio,$postPorPagina);
+
 	// $vistaPaginador = $obj->paginadorNoticia();
 
 

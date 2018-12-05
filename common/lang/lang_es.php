@@ -2,7 +2,14 @@
 $lang = array(
     "menu" => array("Ini<span class='h-bordebajo h-bordebajo1'>cio</span>", "Empre<span class='h-bordebajo h-bordebajo2'>sas</span>", "Ru<span class='h-bordebajo h-bordebajo3'>tas</span>", "Que<span class='h-bordebajo h-bordebajo4'>jas</span>", "Contácte<span class='h-bordebajo h-bordebajo5'>nos</span>","INICIO","RUTAS","EMPRESAS","QUEJAS","CONTÁCTENOS"),
 
-    "noticias" => array(
+    "inicio" => array(
+        "slider" => "",
+        "ini1" => "Noticias",
+        "ini2" => ""
+   
+    ),
+
+    "empresas" => array(
         "emp1" => "EMPRESAS DE TRANSPORTE PÚBLICO",
 
     ),

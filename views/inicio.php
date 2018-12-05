@@ -34,7 +34,7 @@
 				  <div class="container">
 				  	<div class="col-xs-12">
 				  		<div class="not-sect2-noticias col-xs-12">
-							NOTICIAS
+							<?= $lang['inicio']['ini1']; ?>
 						</div>
 
 						<?php  
@@ -51,7 +51,7 @@
 						         echo $noticiasPorPagina;
 						     }
 						     if ($site['lang'] == 'en') {
-						         echo $noticiasPorPagina;
+						         echo $noticiasPorPagina_ingles;
 						     }
 						    ?>
 						</div>
