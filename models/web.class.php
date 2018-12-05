@@ -193,7 +193,6 @@ class Catalogo_web extends generalQuery
                     ,array('and','n.noticia_id','=',$noticiaId)
                 )
             );
-            print_r($arg);
 
             $this->setSelectArg($arg);
             $result = $this->selectData();

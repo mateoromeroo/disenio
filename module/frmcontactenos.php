@@ -69,7 +69,7 @@
 			
 		</div>
 		<div class="cont-sect2 col-xs-12">
-			<div class="cont-sect2-txt col-xs-12">
+			<div class="cont-sect2-txt col-xs-12 cont-sect2-desea">
 				<?= $lang['contactenos']['cont1']; ?>
 			</div>
 		</div>
