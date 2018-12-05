@@ -1,16 +1,17 @@
 <?php
 // "menu" => array("Home", "About us", "Products", "Noticies", "Contac us"),
 $lang = array(
-    "menu" => array("H<span class='h-bordebajo h-bordebajo1'>ome</span>", "Abou<span class='h-bordebajo h-bordebajo2'>t us</span>", "Produ<span class='h-bordebajo h-bordebajo3'>cts</span>", "N<span class='h-bordebajo h-bordebajo4'>ews</span>", "Conta<span class='h-bordebajo h-bordebajo5'> us</span>"),
+    "menu" => array("H<span class='h-bordebajo h-bordebajo1'>ome</span>", "Busin<span class='h-bordebajo h-bordebajo2'>ess</span>", "Rou<span class='h-bordebajo h-bordebajo3'>tes</span>", "Complai<span class='h-bordebajo h-bordebajo4'>nts</span>", "Contact<span class='h-bordebajo h-bordebajo5'> us</span>"),
 
     "inicio" => array(
         "slider" => "",
         "ini1" => "News",
-        "ini2" => ""  
+        "ini2" => ""
+   
     ),
 
-    "noticias" => array(
-        "not1" => "NOTICIAS",
+    "empresas" => array(
+        "emp1" => "PUBLIC TRANSPORT COMPANIES",
 
     ),
     "contactenos" => array(
