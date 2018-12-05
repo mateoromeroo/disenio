@@ -952,6 +952,59 @@ class Catalogo_web extends generalQuery
             }
         }
 
+        public function empresasXpaginaIngles($inicio,$cantidad){
+            $arg=array(
+
+                'tables'=>array(
+                    array('empresa','n'),
+                ),
+                'conditional'=>array(
+                    array('','n.empresa_activo','=','1')
+                ),
+                'order'=>array(
+                    array('order by','n.empresa_orden','ASC')
+                ),
+                'limit'=>array(
+                    array($cantidad,$inicio)
+                )    
+
+            );
+
+            $this->setSelectArg($arg);
+            $result = $this->selectData();
+            
+            foreach($result as $col){
+                $htmlSelect3 .= '
+
+                    <div class="not-sect2-noticia col-xs-12">
+                        <div class="col-xs-12 col-sm-12 col-md-7">
+                            <img class="img-responsive" src="intranet/view/app/img/empresas/'.$col['empresa_imagen1'].'" alt="">
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-5">
+                            <div class="not-sect2-tit col-xs-12">
+                                '.$col['empresa_nombre'].'
+                            </div>
+                            <div class="not-sect2-parr col-xs-12">
+                                '.$col['empresa_descripcion1'].'
+                            </div>
+                            <div class="not-sect2-btn col-xs-12">
+                                <form action="empresaDetalle.php" method="post">
+                                    <button type="submit" name="empresa-id" class="not-sect2-btnLeer" value="'.$col['empresa_id'].'">Leer más
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                ';
+            }
+
+            if($htmlSelect3!=''){
+                return $htmlSelect3;
+            }else if($htmlSelect3 == ''){
+                return 0;
+            }
+        }
+
     
     }	
 

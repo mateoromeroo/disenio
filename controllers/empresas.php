@@ -54,6 +54,7 @@ $obj = new Catalogo_web();
 	$numeroPaginas = ceil($totalempresas / $postPorPagina);
 
 	$empresasPorPagina = $obj->empresasXpagina($inicio,$postPorPagina);
+	$empresasPorPaginaIngles = $obj->empresasXpaginaIngles($inicio,$postPorPagina);
 
 	// $vistaPaginador = $obj->paginadorempresa();
 
