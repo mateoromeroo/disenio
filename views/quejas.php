@@ -2,6 +2,9 @@
 	// echo "--->".$vistaPaginador;
  ?>
 
+<div id="fb-root"></div>
+<script async defer src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.2"></script>
+
 <div class="noticias col-xs-12">
 	<div class="not-sect1 col-xs-12">
 		<!-- background-image -->
@@ -16,6 +19,8 @@
 					 Muchas veces sufrimos abusos por parte de un chofer o cobrador, ya sea por que no quiere aceptar el medio pasaje entre otras cosas. En esta sección puedes ver las experiencias de muchas personas que no han sido escuchado su reclamo. Si tienes alguna queja o sugerencia puedes contarnos tu experiencia también aquí.
 				</div>
 			</div>
+
+			<div class="fb-comments" data-href="https://webtransporte.herokuapp.com/quejas.php" data-width="100%" data-numposts="5"></div>
 
 			<?php  
 				if($site['lang'] == 'es'){
