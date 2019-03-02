@@ -20,16 +20,7 @@
 				</div>
 			</div>
 
-			<div class="fb-comments" data-href="https://webtransporte.herokuapp.com/quejas.php" data-width="100%" data-numposts="5"></div>
-
-			<?php  
-				if($site['lang'] == 'es'){
-					echo $quejasPorPagina;
-				}
-				if ($site['lang'] == 'en') {
-					echo $quejasPorPaginaIngles;
-				}
-			?>
+			<?php include("lista_quejas.html"); ?>
 
 			
 			<div class="not-paginador col-xs-12">

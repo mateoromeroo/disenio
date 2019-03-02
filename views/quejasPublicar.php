@@ -16,7 +16,7 @@
 
 			<div class="quejas-comentario col-xs-12">
 				<div class="col-xs-12 quejas-recuadro">
-					<form action="" method="post">
+					<form action="quejas.php" method="post">
 						<div class="queja-tit col-xs-12">
 							Escribe tu denuncia aquí
 						</div>
@@ -108,18 +108,18 @@
 						
 						<div class="quejas-btn-pub col-xs-12">
 							<div class="quejasPublicar-btn1 col-xs-12 col-sm-6">
-								<form action="quejas.php">
+								
 									<button id="btnPublicar" type="submit" name="queja-btnPublicar" class="btn-publicar">
 											Publicar
 									</button>
-								</form>
+								
 							</div>
 							<div class="quejasPublicar-btn2 col-xs-12 col-sm-6">
-								<form action="quejas.php">
+								
 									<button type="submit" name="queja-btnPublicar" class="btn-publicar">
 											Regresar
 									</button>
-								</form>
+								
 							</div>
 						</div>
 					</form>
