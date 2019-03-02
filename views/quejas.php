@@ -36,46 +36,7 @@
 
 					 ?>
 			</div>
-			<div class="quejas-comentario col-xs-12">
-				<div class="col-xs-12 quejas-recuadro">
-					<form action="" method="post">
-						<div class="queja-tit col-xs-12">
-							Déjanos tu comentario
-						</div>
-						<div class="col-xs-12">
-							<textarea class="queja-entrada" name="queja-comentario" rows="7">Tu comentario...	
-							</textarea>
-						</div>
-						<div class="queja-fila col-xs-12 col-sm-6">
-							<div class="col-xs-12">
-								Nombre
-							</div>
-							<div class="queja-msjPequeno col-xs-12">
-								Si no añade un nombre, saldrá como anónimo su comentario.
-							</div>
-							<div class="col-xs-12">
-								<input class="queja-entrada" type="text" class="" type="text">
-							</div>
-						</div>
-						<!-- <div class="queja-fila col-xs-12 col-sm-6">
-							<div class="col-xs-12">
-								Correo<span class="queja-asterisco"> *</span>
-							</div>
-							<div class="queja-msjPequeno col-xs-12" required>
-								Tu correo eletrónico no será publicado.
-							</div>
-							<div class="col-xs-12">
-								<input class="queja-entrada" type="email" class="" type="text">
-							</div>
-						</div> -->
-						<div class="quejas-btn-pub col-xs-12">
-							<button type="submit" name="queja-btnPublicar" class="btn-publicar">
-									Publicar comentario
-							</button>
-						</div>
-					</form>
-				</div>
-			</div>
+			
 			<div class="queja-realizarQueja-txt col-xs-12">
 				Si has tenido algun problema o tienes alguna queja o sugerencia con alguna empresa de transporte público, puedes contarnos tu experiencia en esta sección.
 			</div>
